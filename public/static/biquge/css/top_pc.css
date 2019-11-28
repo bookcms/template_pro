@@ -1,0 +1,320 @@
+.index_toplist {
+    width: 324px;
+    float: left;
+}
+
+.top-tab {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    background: #e1eced;
+    border-top: solid 2px #88c6e5;
+    border-bottom: 1px solid #88c6e5;
+    border-left: 2px solid #88c6e5;
+    border-right: 2px solid #88c6e5;
+    padding-left: 10px
+}
+
+.top-tab span {
+    float: left;
+    font-weight: 700
+}
+
+.top-tab span.tabRight {
+    float: right;
+    margin-bottom: -1px;
+    _position: relative
+}
+
+.top-tab span.tabRight span {
+    font-weight: 400;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 0 8px;
+    color: #999
+}
+
+.top-tab span.tabRight span.cur {
+    color: #333;
+    border-bottom: 2px solid #88c6e5;
+    height: 28px
+}
+
+.topbook {
+    height: 550px;
+    *height: 570px
+}
+
+.top-book-list {
+    height: 415px;
+    *height: 350px
+}
+
+
+.index_top {
+    height: 280px;
+    *height: 290px;
+    margin-bottom: 10px;
+    background-color: #fef9ef;
+    border: 1px solid #88c6e5;
+    border-top: 0
+}
+
+.topbook ul,
+.index_top ul,
+.top-book-list ul {
+    padding: 5px 10px
+}
+
+.topbook ul li,
+.index_top ul li,
+.top-book-list ul li {
+    line-height: 27px;
+    *line-height: 27px;
+    height: 27px;
+    *height: 23px;
+    color: #999;
+    float: left;
+    width: 100%;
+    font-weight: 400
+}
+
+.topbook ul li span.num,
+.index_top ul li span.num,
+.top-book-list ul li span.num {
+    margin-right: 5px;
+    font-family: verdana;
+    font-style: italic;
+    font-size: 10pt;
+    width: 22px;
+    float: left
+}
+
+.topbook ul li span.genre,
+.index_top ul li span.genre,
+.top-book-list ul li span.genre {
+    width: 60px;
+    margin-right: 5px
+}
+
+.topbook ul li span.hits,
+.index_top ul li span.hits,
+.top-book-list ul li span.author,
+.top-book-list ul li span.hits {
+    width: 40px;
+    float: right;
+    text-align: right;
+    font-family: verdana
+}
+
+.top-book-list ul li span.author {
+    text-align: left;
+    margin-right: 5px;
+    width: auto;
+}
+
+#hotcontent .ll#bzdj {
+    padding: 0 0 10px;
+    width: 976px;
+    margin: 10px auto 0;
+    background-color: #fef9ef;
+    height: auto
+}
+
+#hotcontent .ll#bzdj .top-tab {
+    border: none;
+    border: 0;
+    border-bottom: 1px solid #88c6e5
+}
+
+#hotcontent .ll#bzdj .item {
+    width: 238px
+}
+
+#hotcontent .ll#bzdj .item .image {
+    width: 111px
+}
+
+#hotcontent .ll#bzdj .item dl {
+    width: 120px
+}
+
+#hotcontent .ll#bzdj .item dl dd {
+    text-indent: 0;
+    height: auto
+}
+
+.recomclass {
+    height: 270px
+}
+
+.recomclass dl {
+    width: 217px;
+    float: left;
+    padding: 10px;
+    height: 130px;
+    overflow: hidden;
+    position: relative
+}
+
+.recomclass dl dt {
+    float: left;
+    width: 100px;
+    height: 130px;
+    margin-right: 12px
+}
+
+.recomclass dl dt img {
+    height: 125px;
+    width: 97px
+}
+
+.recomclass dl dd {
+    float: left;
+    width: 105px;
+    line-height: 21px;
+    color: #777
+}
+
+.recomclass dl dd a {
+    color: #6f78a7;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.recomclass ul {
+    height: 60px;
+    border-top: 1px dashed #ddd;
+    float: left;
+    margin: 0 10px
+}
+
+.recomclass ul li {
+    color: #888;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    width: 218px;
+    overflow: hidden;
+    display: inline;
+    margin: 7px 8px 0 4px
+}
+
+.recomclass ul li em {
+    color: #999;
+    text-align: right;
+    float: right;
+    width: auto;
+    font-size: 12px;
+    font-weight: 400
+}
+
+.recomclass ul li a {
+    color: #545454
+}
+
+.recomclass ul li a:hover {
+    color: #f60
+}
+
+.mright {
+    margin-right: 4px
+}
+
+.mbottom {
+    margin-bottom: 5px
+}
+
+.recombook,
+.topbook,
+.index_top,
+.top-book-list {
+    border: 2px solid #88c6e5;
+    border-top: none;
+    background-color: #fef9ef
+}
+
+.label,
+.coverecom h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 2px
+}
+
+.label {
+    height: 16px;
+    width: 4px;
+    background: #88c6e5;
+    margin-left: 12px
+}
+
+.coverecom em {
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal
+}
+
+.hidden {
+    display: none
+}
+
+.w_760 {
+    width: 760px
+}
+
+.w_200 {
+    width: 205px
+}
+
+.w_485 {
+    width: 485px
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.mright {
+    margin-right: 4px
+}
+
+#maininfo1 {
+    width: 980px;
+    margin: 10px auto
+}
+
+.tabstit {
+    height: 35px;
+    background: #e1eced;
+    color: #666;
+    line-height: 35px;
+    border: 2px solid #88c6e5;
+    border-bottom: 1px solid #88c6e5
+}
+
+.tabstit a {
+    padding: 0 8px;
+    color: #666
+}
+
+.tabstit1 {
+    height: 35px;
+    background: #e1eced;
+    color: #666;
+    line-height: 35px;
+    border: 2px solid #88c6e5;
+    border-bottom: 1px solid #88c6e5
+}
+
+.tabstit1 a {
+    padding: 0 8px;
+    color: #666
+}

@@ -1,0 +1,627 @@
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+.synopsisArea .btn {
+    line-height: 28px;
+    text-align: center;
+    padding-top: 8px;
+    line-height: 28px;
+    height: 40px;
+    text-align: center;
+    padding-top: 8px
+}
+
+.synopsisArea .btn a {
+    margin: 5px 3px;
+    padding: 5px 18px;
+    background-size: 20px;
+    background: #eb2650;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px #d32248 inset
+}
+
+.synopsisArea .btn .btn_toBookShelf {
+    background: #f0962a;
+    box-shadow: 0 2px 1px #d88726 inset
+}
+
+.synopsisArea .btn .btn_toMyBook {
+    background: #658fbd;
+    box-shadow: 0 2px 1px #5b80aa inset
+}
+
+div, p {
+    wrap-work: break-word;
+    word-break: break-all;
+    word-wrap: break-word;
+    word-break: normal;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box
+}
+
+.clear {
+    clear: both
+}
+
+.clearf::after {
+    content: "";
+    clear: both;
+    display: table
+}
+
+li {
+    list-style: none
+}
+
+em {
+    font-style: normal
+}
+
+body {
+    color: #4c6978;
+    font: 14px 'microsoft yahei', Arial, Helvetica, sans-serif
+}
+
+input[type="text"], input[type="button"], input[type="submit"], input[type="search"], textarea {
+    font: 12px 宋体, Arial, Helvetica, sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -box-sizing: border-box;
+    -webkit-appearance: none
+}
+
+img {
+    border: none
+}
+
+a {
+    color: #4c6978;
+    text-decoration: none;
+    border: none;
+    cursor: pointer
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden
+}
+
+.clearfix {
+    display: inline-block
+}
+
+* html .clearfix {
+    height: 1%
+}
+
+.clearfix {
+    display: block
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 16px;
+    font-weight: 400
+}
+
+footer {
+    padding: 15px 10px;
+    text-align: center;
+    line-height: 33px;
+    background: #68aac2;
+    position: relative;
+    font-size: 14px
+}
+
+footer .version a {
+    margin: 0 10px;
+    color: #c5d7df;
+    text-shadow: 1px 1px #3e86a8
+}
+
+footer .version .sel {
+    color: #fff;
+    font-size: 16px
+}
+
+footer .link a {
+    margin: 0 10px;
+    color: #accad6;
+    font-size: 14px
+}
+
+footer img {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    cursor: pointer;
+    width: 31px
+}
+
+footer .channel a {
+    margin: 0 5px;
+    color: #c5d7df;
+    text-shadow: 1px 1px #3e86a8
+}
+
+
+.recommend .label, .tabArea .label {
+    padding: 0 5px;
+    width: 320px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 5px
+}
+
+.showmore {
+    height: 40px;
+    line-height: 40px;
+    text-align: center
+}
+
+.showmore img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-bottom: -3px
+}
+
+.hidearea {
+    display: none
+}
+
+.iconback {
+    float: left;
+    margin-left: 10px
+}
+
+.iconhome {
+    float: right;
+    margin-right: 12px
+}
+
+.iconback, .iconhome {
+    margin-top: 12px;
+    text-align: center;
+    display: block;
+    color: #fff
+}
+
+.iconback img, .iconhome img {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px
+}
+
+.searchForm {
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    clear: both
+}
+
+.searchForm_input {
+    border: 1px #c0deea solid;
+    font-size: 14px;
+    background: #f8fdff;
+    padding: 0 60px 0 86px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #cbcfd1
+}
+
+.searchTarge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    z-index: 100
+}
+
+.searchTarge .TargeTitle {
+    padding-right: 6px;
+    height: 30px;
+    line-height: 30px;
+    border-right: 1px #C0DEEA solid;
+    color: #C0DEEA
+}
+
+.searchTarge .TargeList {
+    background: #C0DEEA;
+    color: #fff;
+    display: none
+}
+
+.searchTarge .active {
+    display: block !important
+}
+
+.searchTarge .TargeList li:first-child {
+    border-bottom: 1px solid
+}
+
+.searchTarge .TargeList li {
+    padding: 8px 0 8px 24px;
+    line-height: 24px
+}
+
+.searchTarge .TargeList li:hover {
+    background: #b4dae8
+}
+
+
+.synopsisArea .btn .bg_android {
+    background: #97C03D;
+    box-shadow: 0 2px 1px #97C03D inset
+}
+
+.synopsisArea .btn .bg_ios {
+    background: #8c8989;
+    box-shadow: 0 2px 1px #8c8989 inset
+}
+
+.synopsisArea .btn .bg_txt {
+    background: #658fbd;
+    box-shadow: 0 2px 1px #5b80aa inset
+}
+
+.lnr {
+    width: 24px;
+    height: 24px;
+    fill: currentColor
+}
+
+.lnr-arrow-up-circle {
+    position: absolute;
+    right: 25px;
+    top: 18px;
+    cursor: pointer;
+    width: 31px;
+    color: #fff
+}
+
+.lnr-magnifier {
+    width: 18px;
+    height: 18px
+}
+
+.lnr-chevron-down {
+    width: 14px;
+    height: 18px
+}
+
+.lnr-user {
+    width: 20px;
+    height: 20px
+}
+
+.TargeTitle span {
+    display: inline-block;
+    float: left
+}
+
+.serach_span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    color: #C0DEEA;
+    line-height: 30px;
+    border-left: 1px #C0DEEA solid;
+    padding-right: 8px
+}
+
+.serach_span span {
+    display: inline-block;
+    float: left
+}
+
+.s_magnifier {
+    padding: 6px 0 0 6px
+}
+
+.s_chevrondown {
+    padding: 6px 0 0 3px
+}
+
+.s_submitbtn .searchForm_btn {
+    background: none;
+    color: #C0DEEA;
+    border: none;
+    padding-top: 7px;
+    font-size: 14px;
+    padding-right: 4px
+}
+
+.directoryArea p a {
+    display: inline-block;
+    width: 100%
+}
+
+.directoryArea {
+    overflow: hidden;
+}
+
+.icon-bok-logo > svg {
+    width: 32px;
+    height: 32px;
+    vertical-align: -.25ex;
+    fill: currentColor
+}
+
+/*修改资料开始*/
+.edit {
+    margin-bottom: 15px;
+    height: auto;
+    overflow: hidden;
+}
+
+.edit p {
+    padding: 0 10px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    clear: both;
+    height: auto;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.edit em {
+    color: #eb2650;
+}
+
+.edit .info {
+    background: #EDFAFF;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+.edit .opt .btn {
+    float: left;
+    background: #4baacd;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    margin: 0 6px 0 0;
+    font-size: 14px;
+}
+
+.edit .opt .btnem {
+    background: #999;
+}
+
+.edit .opt {
+    line-height: 40px;
+}
+
+.edit input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.edit .tip {
+    color: #eb2650;
+    display: none;
+}
+
+.edit .btn, .edit .btn2 {
+    display: block;
+    background: #4baacd;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border: none;
+}
+
+.edit .submittip {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.editpwd input {
+    margin: 0;
+}
+
+.editpwd .btn {
+    margin-top: 20px;
+}
+
+#yzmnum {
+    display: none;
+}
+
+/*修改资料结束*/
+
+/*登录提示css*/
+.login_tips span {
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+}
+
+.login_tips span em {
+    color: #eb2650;
+}
+
+.login_tips p img {
+    vertical-align: bottom;
+    padding-right: 5px;
+}
+
+
+.pc .area.login_tips .em {
+    background: #eb2650;
+    color: #fff;
+    display: block;
+    text-shadow: none;
+}
+
+/*登录提示css end*/
+
+
+/*未登录状态*/
+.nologin {
+    padding: 5px 10px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.tologin {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #4baacd;
+    color: #fff;
+    border-bottom: 1px #7f7f7f solid;
+}
+
+.nologin_rec .date {
+    color: #7F9BA8;
+}
+
+.info3 {
+    padding: 0 10px;
+    margin: 10px 0;
+    line-height: 30px;
+}
+
+.info3 a {
+    color: #4baacd;
+}
+
+.info3 .tologin {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #4baacd;
+    color: #fff;
+    border-bottom: 1px #7f7f7f solid;
+}
+
+/*未登录状态 end*/
+
+/*个人中心内部顶栏*/
+.pcInsidePageHeader {
+    height: 49px;
+    line-height: 49px;
+    font-size: 24px;
+    background: #4baacd;
+    color: #0b607f;
+    font-weight: bolder;
+    padding: 0 10px;
+    padding-left: 0;
+    position: relative;
+}
+
+.pcInsidePageHeader .iconback img, .pcInsidePageHeader .iconhome img {
+    margin-top: 4px;
+}
+
+.icon_box {
+    position: absolute;
+    width: auto;
+    right: 10px;
+    top: 0;
+}
+
+.icon_box a {
+    display: inline-block;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.icon_commend {
+    background: url(../mycomment/images/icon_commend.png) no-repeat 50% 50% #217ea0;
+    background-size: 60% 60%;
+    position: relative;
+}
+
+.icon_index {
+    background: url(../mycomment/images/icon_index.png) no-repeat 50% 50% #217ea0;
+    background-size: 70% 70%;
+}
+
+.icon_person {
+    background: url(../mycomment/images/icon_person.png) no-repeat 50% 50% #217ea0;
+    background-size: 70% 70%;
+}
+
+.my_commend {
+    background: #f3f3f3;
+    padding: 10px;
+    line-height: 30px;
+    position: absolute;
+    z-index: 20;
+    display: none;
+    top: 50px;
+    width: 100%;
+}
+
+.my_commend a {
+    width: 25%;
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.icon_change {
+    background: url(../mycomment/images/commend_hover.png) no-repeat 50% 50% #f3f3f3;
+    background-size: 60% 60%;
+}
+
+.on {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #f3f3f3;
+    margin-left: -5px;
+    display: none;
+}
+
+.icon_box a.icon_change .on {
+    display: block;
+}
+
+

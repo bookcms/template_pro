@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.synopsisArea .btn {
+    line-height: 28px;
+    text-align: center;
+    padding-top: 8px;
+    line-height: 28px;
+    height: 40px;
+    text-align: center;
+    padding-top: 8px
+}
+
+.synopsisArea .btn a {
+    margin: 5px 3px;
+    padding: 5px 18px;
+    background-size: 20px;
+    background: #eb2650;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px #d32248 inset
+}
+
+.synopsisArea .btn .btn_toBookShelf {
+    background: #f0962a;
+    box-shadow: 0 2px 1px #d88726 inset
+}
+
+.synopsisArea .btn .btn_toMyBook {
+    background: #658fbd;
+    box-shadow: 0 2px 1px #5b80aa inset
+}
+
+div, p {
+    wrap-work: break-word;
+    word-break: break-all;
+    word-wrap: break-word;
+    word-break: normal;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box
+}
+
+.clear {
+    clear: both
+}
+
+.clearf::after {
+    content: "";
+    clear: both;
+    display: table
+}
+
+li {
+    list-style: none
+}
+
+em {
+    font-style: normal
+}
+
+body {
+    color: #4c6978;
+    font: 14px 'microsoft yahei', Arial, Helvetica, sans-serif
+}
+
+input[type="text"], input[type="button"], input[type="submit"], input[type="search"], textarea {
+    font: 12px 宋体, Arial, Helvetica, sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -box-sizing: border-box;
+    -webkit-appearance: none
+}
+
+img {
+    border: none
+}
+
+a {
+    color: #4c6978;
+    text-decoration: none;
+    border: none;
+    cursor: pointer
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden
+}
+
+.clearfix {
+    display: inline-block
+}
+
+* html .clearfix {
+    height: 1%
+}
+
+.clearfix {
+    display: block
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 16px;
+    font-weight: 400
+}
+
+.channelHeader {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 1px 1px #2680aa;
+    background-size: 136px 45px;
+    background-color: #68aac2;
+    border-top: 1px #8ec5d9 solid
+}
+
+.channelHeader2 .title {
+    text-align: center
+}
+
+.recommend .label, .tabArea .label {
+    padding: 0 5px;
+    width: 320px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 5px
+}
+
+.showmore {
+    height: 40px;
+    line-height: 40px;
+    text-align: center
+}
+
+.showmore img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-bottom: -3px
+}
+
+.hidearea {
+    display: none
+}
+
+.channelHeader {
+    overflow: hidden;
+    padding: 0
+}
+
+.iconback {
+    float: left;
+    margin-left: 12px
+}
+
+.iconhome {
+    float: right;
+    margin-right: 12px
+}
+
+.iconback, .iconhome {
+    margin-top: 12px;
+    text-align: center;
+    display: block;
+    color: #fff
+}
+
+.iconback img, .iconhome img {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px
+}
+
+.searchForm {
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    clear: both
+}
+
+.searchForm_input {
+    border: 1px #c0deea solid;
+    font-size: 14px;
+    background: #f8fdff;
+    padding: 0 60px 0 86px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #cbcfd1
+}
+
+.searchTarge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    z-index: 100
+}
+
+.searchTarge .TargeTitle {
+    padding-right: 6px;
+    height: 30px;
+    line-height: 30px;
+    border-right: 1px #C0DEEA solid;
+    color: #C0DEEA
+}
+
+.searchTarge .TargeList {
+    background: #C0DEEA;
+    color: #fff;
+    display: none
+}
+
+.searchTarge .active {
+    display: block !important
+}
+
+.searchTarge .TargeList li:first-child {
+    border-bottom: 1px solid
+}
+
+.searchTarge .TargeList li {
+    padding: 8px 0 8px 24px;
+    line-height: 24px
+}
+
+.searchTarge .TargeList li:hover {
+    background: #b4dae8
+}
+
+.synopsisArea .btn .bg_android {
+    background: #97C03D;
+    box-shadow: 0 2px 1px #97C03D inset
+}
+
+.synopsisArea .btn .bg_ios {
+    background: #8c8989;
+    box-shadow: 0 2px 1px #8c8989 inset
+}
+
+.synopsisArea .btn .bg_txt {
+    background: #658fbd;
+    box-shadow: 0 2px 1px #5b80aa inset
+}
+
+.lnr {
+    width: 24px;
+    height: 24px;
+    fill: currentColor
+}
+
+.lnr-arrow-up-circle {
+    position: absolute;
+    right: 25px;
+    top: 18px;
+    cursor: pointer;
+    width: 31px;
+    color: #fff
+}
+
+.lnr-magnifier {
+    width: 18px;
+    height: 18px
+}
+
+.lnr-chevron-down {
+    width: 14px;
+    height: 18px
+}
+
+.lnr-user {
+    width: 20px;
+    height: 20px
+}
+
+.TargeTitle span {
+    display: inline-block;
+    float: left
+}
+
+.serach_span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    color: #C0DEEA;
+    line-height: 30px;
+    border-left: 1px #C0DEEA solid;
+    padding-right: 8px
+}
+
+.serach_span span {
+    display: inline-block;
+    float: left
+}
+
+.s_magnifier {
+    padding: 6px 0 0 6px
+}
+
+.s_chevrondown {
+    padding: 6px 0 0 3px
+}
+
+.s_submitbtn .searchForm_btn {
+    background: none;
+    color: #C0DEEA;
+    border: none;
+    padding-top: 7px;
+    font-size: 14px;
+    padding-right: 4px
+}
+
+.directoryArea p a {
+    display: inline-block;
+    width: 100%
+}
+
+.directoryArea {
+    overflow: hidden;
+}
+
+.note {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+}
+
+.slide {
+    width: 100%;
+    overflow: hidden;
+}
+
+/*.slide-item {float:left;}*/
+/*.slide-con2 {width:200%;} .slide-con2 .slide-item {width:50%;}
+.slide-con3 {width:300%;} .slide-con3 .slide-item {width:33.33%;}*/
+
+.hot_sale {
+    clear: both;
+    background: #edfaff;
+    border-top: 2px #edfaff solid;
+    border-bottom: 2px #edfaff solid;
+    overflow: hidden;
+}
+
+.hot_sale {
+    position: relative;
+    height: 145px;
+    padding: 7px 10px 0 110px;
+}
+
+.hot_sale img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: 1px #b4dae8 solid;
+    width: 87px;
+    height: 117px;
+}
+
+.hot_sale .title {
+    color: #375868;
+    font-size: 16px;
+}
+
+.hot_sale .author, .hot_sale .review {
+    font-size: 14px;
+    color: #7f9ba8;
+    line-height: 22px;
+}
+
+.hot_sale .review {
+    line-height: 20px;
+}
+
+.hot_sale:hover {
+    background: #d9f5ff;
+    border-bottom: 2px #9dcada solid;
+    border-top: 2px #9dcada solid;
+}
+
+.hot_saleEm, .hot_sale2Em {
+    background: #fff;
+    border-bottom: 2px #fff solid;
+    border-top: 2px #fff solid;
+}
+
+.hot_sale .date {
+    color: #e76767;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.list p {
+    clear: both;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.list p .title {
+    float: left;
+    overflow: hidden;
+    width: 65%;
+}
+
+.list p .date, .list p .date {
+    float: right;
+    font-size: 10px;
+    color: #4c6978;
+    width: 15%;
+    text-align: left;
+}
+
+.list p .author {
+    width: 20%;
+}
+
+.list p .up {
+    float: right;
+    font-size: 10px;
+    color: #d97474;
+    width: 20%;
+    text-align: left;
+}
+
+.list .em {
+    background: #f6fcff;
+}
+
+.emptytip {
+    color: #d25151;
+    padding: 30px 10px 30px 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.list .emptytip {
+    padding: 30px 10px 30px 10px;
+    line-height: 30px;
+    height: auto;
+    font-size: 16px;
+}
+
+.rankinglist p {
+    height: 41px;
+    line-height: 41px;
+}
+
+.Num {
+    float: left;
+    width: 33px;
+    height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    color: #d25151;
+    font-size: 14px;
+}
+
+.rankingList label {
+    float: left;
+    width: 50%;
+}
+
+.rankingList_3 label {
+    float: left;
+    width: 33%;
+}
+
+.rankingList_4 label {
+    float: left;
+    width: 20%;
+}
+
+.rankingList label input {
+    margin-right: 5px;
+}
+
+.rankingList .info {
+    font-size: 14px;
+    color: #8ebdcf;
+}
+
+.rankingList .info a {
+    float: right;
+    text-decoration: underline;
+    color: #d25151;
+}
+
+.rankingdashang p .title {
+    width: 80%;
+}
+
+.rankingList .hot_sale {
+    padding: 7px 8px 5px 40px;
+    height: auto;
+    overflow: hidden;
+}
+
+.rankingList .num {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    text-align: center;
+    letter-spacing: -1px;
+    height: 25px;
+    width: 30px;
+    line-height: 25px;
+    background: #B3B3B3;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.rankingList .num1 {
+    background: #FF3E3E;
+}
+
+.rankingList .num2 {
+    background: #68aac2;
+}
+
+.rankingList .num3 {
+    background: #68aac2;
+}
+
+.rankingList .hot_sale p {
+    height: auto;
+    line-height: 22px;
+    padding: 0;
+    background: transparent !important;
+    border-bottom:0 !important;
+}
+
+.rankingList .hot_sale .author {
+    font-size: 12px;
+}
+
+.transition {
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -o-transition: -o-transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+}
+
+.sideBox {
+    background-color: #303135;
+    bottom: 0;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 270px;
+    z-index: 0;
+}
+
+.sideMenu li {
+    border-bottom: 1px solid #27282B;
+    border-top: 1px solid #3C3C3C;
+    height: 40px;
+    line-height: 40px;
+}
+
+.sideMenu li a {
+    color: #FFFFFF;
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    padding-left: 17px;
+    position: relative;
+    text-shadow: 1px 1px 2px #474849;
+}
+
+.sideMenu li a:hover {
+    background-color: #68AAC2;
+}
+
+.sideMenu li .sel {
+    background-color: #68AAC2;
+}
+
+.main {
+    z-index: 100;
+    background: #fff;
+}
+
+.explain {
+    font-size: 14px;
+    color: #6b8793;
+    padding: 10px;
+    line-height: 25px;
+    height: auto;
+    overflow: auto;
+}
+
+.page {
+    background: #68aac2;
+    padding: 0 10px;
+    color: #c5d7df;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.page a {
+    color: #fff;
+    margin: 0 5px;
+}
+
+.pageinput {
+    float: right;
+}
+
+.page .page_txt {
+    padding: 2px 5px;
+    border: 1px #c5d7df solid;
+    background: #f6fcff;
+    color: #4c6978;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 80px;
+    margin-right: 5px;
+    color: #333;
+    text-align: center;
+}
+
+.pageBox {
+    position: relative;
+    width: 100%;
+}
+
+.page::before, .page::after {
+    content: " ";
+    white-space: pre;
+}

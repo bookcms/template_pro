@@ -1,0 +1,171 @@
+input[type=text]:focus, input[type=password]:focus {
+    outline: 0
+}
+
+input::-ms-clear {
+    display: none
+}
+
+.login {
+    background-color: #fff;
+    margin: 50px auto;
+    width: 450px;
+    border: 1px solid #eee;
+    padding: 5px 0;
+}
+
+.login .header {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    width: auto !important;
+    border-bottom: 1px solid #e2e2e2;
+    position: relative;
+    font-family: microsoft yahei, serif
+}
+
+.login .web_login {
+    width: 370px;
+    padding-bottom: 20px;
+    position: relative;
+    _left: 60px;
+    *left: 0
+}
+
+.login .web_login .login_form {
+    width: 300px;
+    margin: 30px auto 0;
+}
+
+.login .web_login .reg_form {
+    width: 300px;
+    margin: 0 auto
+}
+
+.login .web_login .input-tips {
+    float: left;
+    margin-top: 10px;
+    width: 85px;
+    height: 38px;
+    font-size: 16px;
+    line-height: 38px;
+    font-family: hiragino sans gb, microsoft yahei
+}
+.login .web_login .login-button-box {
+    margin:20px auto;
+    text-align: center;
+}
+
+.login .web_login .login-button-box .button_blue {
+    display: inline-block;
+    height: 41px;
+    width:150px;
+    border-radius: 4px;
+    background: #71b3dd;
+    border: 0;
+    cursor: pointer;
+    border-bottom: 2px solid #449fdd;
+    *border-bottom: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+    *width: 140px;
+    text-align: center;
+    outline: 0;
+    font-family: microsoft yahei, Arial, Helvetica, sans-serif
+}
+
+.login .web_login .login-button-box input.button_blue:hover {
+    background: #1991c1;
+    border-bottom: 3px solid #2d7998;
+    *border-bottom: none;
+    color: #fff;
+    text-decoration: none
+}
+
+.login .web_login .verify-code {
+    width:88px !important;
+    vertical-align:top !important;
+}
+.login .web_login .captcha {
+    width: 95px;
+    height: 38px;
+}
+
+.login .web_login .inputOuter {
+    width: 200px;
+    height: 42px;
+    margin-top: 10px;
+    float: left
+}
+
+.login .web_login .inputOuter2 {
+    width: 200px;
+    margin-top: 6px;
+    margin-top: 5px \9;
+    float: left
+}
+
+.login .web_login .input-style {
+    width: 200px;
+    height: 36px;
+    padding-left: 5px;
+    line-height: 36px;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+    color: #333;
+    border-radius: 2px;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 14px;
+    ime-mode: disabled
+}
+
+.login .web_login input.input-style2:focus, .login .web_login input.input-style:focus {
+    border: 1px solid #198bd4;
+    box-shadow: 0 0 2px #198bd4
+}
+.login .web_login .uinArea {
+    height: 55px;
+    position: relative;
+    z-index: 10
+}
+
+.login .web_login .pwdArea {
+    height: 55px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 3
+}
+
+.cue {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border: 1px #ccc solid;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: hiragino sans gb, microsoft yahei
+}
+
+.reg_form li {
+    height: 55px
+}
+
+.cue {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    border-radius: 3px
+}
+
+.login .web_login input.input-style:focus {
+    border: 1px solid #5796f;
+    box-shadow: 0 0 0
+}
+
+.login .web_login .uinArea {
+    height: 60px
+}
