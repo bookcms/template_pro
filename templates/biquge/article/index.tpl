@@ -70,7 +70,7 @@
 {/block}
 
 {block name="footer"}
-<script src="__STATIC__/js/bookcase.js"></script>
+
 <script id="chapter_html" type="text/html">
     <dd><a href="{:url('/chapter',array(),'',true)}/{article_id}/{chapter_id}.html" target="_blank">{title}</a></dd>
 </script>

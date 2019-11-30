@@ -6,14 +6,14 @@
 
 <div class="article">
     <h2 class="title"><span>封面强推</span></h2>
-    {block_list block_id="3"}
+    {block_list block_id="1"}
     <div class="block">
-        <div class="block_img"><a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}"><img height=100 width=80 src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'"/></a>
+        <div class="block_img"><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}"><img height=100 width=80 src="{$block.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'"/></a>
         </div>
         <div class="block_txt">
-            <p><a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}"><h2>{$novel.Title}</h2></a></p>
-            <p>作者：<a href="{:url('/author/' . urlencode($novel['Author']) )}">{$novel.Author}</a></p>
-            <p><a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Introduction}</a></p>
+            <p><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}"><h2>{$block.Title}</h2></a></p>
+            <p>作者：<a href="{:url('/author/' . urlencode($block['Author']) )}">{$block.Author}</a></p>
+            <p><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}">{$block.Introduction}</a></p>
         </div>
         <div style="clear:both"></div>
     </div>

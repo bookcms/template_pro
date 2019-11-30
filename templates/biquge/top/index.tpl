@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="__STATIC__/css/top_pc.css">
 {/block}
 {block name="uaredirect"}
-<script type="text/javascript">uaredirect("{:url('/ranking',array(),'html','m')}");</script>
+<script type="text/javascript">uaredirect("{:url('/top',array(),'html','m')}");</script>
 {/block}
 {block name="body"}
 <div id="main">

@@ -11,6 +11,9 @@
 
 use think\facade\Route;
 
+//更新缓存
+Route::post('update_cache', 'article/update_cache');
+
 //排行榜
 Route::get('top', 'top/index');
 
@@ -40,8 +43,7 @@ Route::get('full_:page', 'index/full');
 Route::get('full', 'index/full');
 //搜索
 Route::get('search', 'index/search');
-//更新缓存
-Route::post('update_cache', 'article/update_cache');
+
 //站点地图
 Route::get('sitemap_:page.xml', 'index/build_site_index_map');
 Route::get('sitemap.xml', 'index/build_site_map');

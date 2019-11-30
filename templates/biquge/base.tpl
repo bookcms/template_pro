@@ -13,7 +13,6 @@
     {block name="header"}{/block}
     <script src="/static/js/uaredirect.js" type="text/javascript"></script>
     {block name="uaredirect"}{/block}
-    <script type="text/javascript" src="__JS__/jquery.min.js"></script>
     <script type="text/javascript" src="__JS__/header.js"></script>
 </head>
 <body>
@@ -53,7 +52,7 @@
             <li><a {eq name="$current_cate.alias" value="$category_nav.alias"}class="current"{/eq} href="/{$category_nav.alias}" target="_self">{$category_nav.name}</a></li>
             {/if}
             {/foreach}
-            <li><a {eq name="$current_cate.alias" value="ranking"}class="current"{/eq} href="{:url('/ranking')}" target="_self" title="{$site_config.site_name}-排行榜">排行榜</a></li>
+            <li><a {eq name="$current_cate.alias" value="ranking"}class="current"{/eq} href="{:url('/top')}" target="_self" title="{$site_config.site_name}-排行榜">排行榜</a></li>
             <li><a {eq name="$current_cate.alias" value="full"}class="current"{/eq} href="{:url('/full')}" target="_self">全本</a></li>
 <!--            <li><a {eq name="$current_cate.alias" value="bookcase"}class="current"{/eq} href="{:url('/bookcase')}" target="_self" title="{$site_config.site_name}-临时书架">临时书架</a></li>-->
         </ul>

@@ -15,7 +15,7 @@
         <div class="tab-nav tab-nav2 clearfix">
             <h2 style="width: 16%"><a href="{:url('/')}" class="iconback"><svg class="lnr lnr-chevron-left-circle"><use xlink:href="#lnr-chevron-left-circle"></use></svg></a></h2>
             {foreach $ranking_nav_list as $ranking}
-            <h2 style="width: 24%"><a href="{:url('/ranking',array('type' => $ranking['type']))}" {eq name="$type" value="$ranking.type"}class="tab-nav-cur"{/eq} >{$ranking.name}</a></h2>
+            <h2 style="width: 24%"><a href="{:url('/top',array('type' => $ranking['type']))}" {eq name="$type" value="$ranking.type"}class="tab-nav-cur"{/eq} >{$ranking.name}</a></h2>
             {/foreach}
         </div>
     </div>
@@ -24,7 +24,7 @@
 
 <nav class="sortChannel_nav">
     {foreach $site_config.category_list as $category}
-    <a {eq name="$cid" value="$category.cid"}class="on"{/eq} href="{:url('/ranking',array('type' =>$type,'cid' => $category['cid']))}">{$category.name}</a>
+    <a {eq name="$cid" value="$category.cid"}class="on"{/eq} href="{:url('/top',array('type' =>$type,'cid' => $category['cid']))}">{$category.name}</a>
     {/foreach}
 </nav>
 <div class="recommend">

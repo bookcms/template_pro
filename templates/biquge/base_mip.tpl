@@ -29,7 +29,7 @@
         <li><a href="{$site_config.mobile_domain}{:url('/sort')}">分类</a></li>
         <li><a href="{$site_config.mobile_domain}{:url('/last_insert')}">新书</a></li>
         <li><a href="{$site_config.mobile_domain}{:url('/full')}">全本</a></li>
-        <li><a href="{$site_config.mobile_domain}{:url('/ranking')}">排行榜</a></li>
+        <li><a href="{$site_config.mobile_domain}{:url('/top')}">排行榜</a></li>
         <li><a href="{$site_config.mobile_domain}{:url('/user/rack_list')}">书架</a></li>
         <div class="cc"></div>
     </ul>

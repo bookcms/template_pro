@@ -30,7 +30,7 @@
         <li><a href="{:url('/sort')}">分类</a></li>
         <li><a href="{:url('/last_insert')}">新书</a></li>
         <li><a href="{:url('/full')}">全本</a></li>
-        <li><a href="{:url('/ranking')}">排行榜</a></li>
+        <li><a href="{:url('/top')}">排行榜</a></li>
         <li><a href="{:url('/user/rack_list')}">书架</a></li>
         <div class="cc"></div>
     </ul>

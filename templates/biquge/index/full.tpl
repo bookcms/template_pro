@@ -10,10 +10,10 @@
             {block_list block_id="4" limit="6"}
             <div class="item">
                 <div class="image">
-                    <a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}"><img src="{$novel.LocalImage | down_image}" alt="{$novel.Title}" width="120" height="150" onerror="this.src='__IMAGES__/nopic.gif'"/></a></div>
+                    <a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}"><img src="{$block.LocalImage | down_image}" alt="{$block.Title}" width="120" height="150" onerror="this.src='__IMAGES__/nopic.gif'"/></a></div>
                 <dl>
-                    <dt><span>{$novel.Author}</span><a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Title}</a></dt>
-                    <dd>{$novel.Introduction}</dd>
+                    <dt><span>{$block.Author}</span><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}">{$block.Title}</a></dt>
+                    <dd>{$block.Introduction}</dd>
                 </dl>
                 <div class="clear">
                 </div>

@@ -24,7 +24,7 @@
     </div>
 
     <div class="ablum_read">
-        <span class="margin_right"><a href="{:url("/book_list/" . $novel['PrimaryId'],"","html",true)}">开始阅读</a></span>
+        <span class="margin_right"><a href="{:url("/book_list/" . $novel['PrimaryId'],"","html",'m')}">开始阅读</a></span>
     </div>
     <div class="intro" id="intro" name="intro">{$novel.Title}小说简介</div>
     <div class="intro_info">{$novel.Introduction}</div>

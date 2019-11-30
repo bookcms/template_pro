@@ -19,14 +19,6 @@ use think\facade\Config;
 use think\facade\Env;
 use think\facade\Request;
 
-/**
- * 显示采集源名称
- * @param string $url
- * @return string
- */
-function show_source_name ($url = '') {
-    return "xxx";
-}
 
 /**
  * 获取幻灯片
@@ -111,7 +103,7 @@ function get_last_offset_sort($sort = 0,$source_list = [],$flag = ''){
     if ($flag == 'custom') {
         return "0_" . get_offset_value($sort);
     }
-
+    $url = '';
     if (strpos($flag,"_")) {
         $url = "http://" . str_replace("_",".",$flag);
     }

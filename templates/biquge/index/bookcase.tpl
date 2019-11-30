@@ -27,5 +27,5 @@
     var article_rule = "{:url('/book',array(),'',true)}/{article_id}.html";
     var chapter_rule = "{:url('/chapter',array(),'',true)}/{article_id}/{chapter_id}.html";
 </script>
-<script src="__STATIC__/js/bookcase.js"></script>
+
 {/block}

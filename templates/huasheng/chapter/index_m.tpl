@@ -53,7 +53,7 @@
 <div class="footer">
     <p>
         <a href="{$site_config.mobile_domain}">首页</a>|
-        <a href="{:url('/ranking')}">排行榜</a>|
+        <a href="{:url('/top')}">排行榜</a>|
         <a href="{:url('/author/' . urlencode($novel.Author))}">{$novel.Author}</a>|
 <!--        <a href="{:url('login/index')}">用户中心</a>-->
     </p>

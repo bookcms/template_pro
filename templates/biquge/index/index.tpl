@@ -11,13 +11,13 @@
     <div id="main">
         <div id="hotcontent">
             <div class="l">
-                {block_list block_id="5" limit="4"}
+                {block_list block_id="1" limit="4"}
                 <div class="item">
                     <div class="image">
-                        <a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}"><img src="{$novel.LocalImage | down_image}" alt="{$novel.Title}" width="120" height="150" onerror="this.src='__IMAGES__/nopic.gif'"/></a></div>
+                        <a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}"><img src="{$block.LocalImage | down_image}" alt="{$block.Title}" width="120" height="150" onerror="this.src='__IMAGES__/nopic.gif'"/></a></div>
                     <dl>
-                        <dt><span>{$novel.Author}</span><a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Title}</a></dt>
-                        <dd>{$novel.Introduction}</dd>
+                        <dt><span>{$block.Author}</span><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}">{$block.Title}</a></dt>
+                        <dd>{$block.Introduction}</dd>
                     </dl>
                     <div class="clear">
                     </div>
@@ -27,8 +27,8 @@
             <div class="r">
                 <h2>上期强推</h2>
                 <ul>
-                    {block_list block_id="5" limit="8"}
-                    <li><span class="s2"><a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Title}</a></span><span class="s5">{$novel.Author}</span></li>
+                    {block_list block_id="2" limit="8"}
+                    <li><span class="s2"><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}">{$block.Title}</a></span><span class="s5">{$block.Author}</span></li>
                     {/block_list}
                 </ul>
             </div>

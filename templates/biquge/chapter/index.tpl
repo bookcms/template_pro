@@ -70,7 +70,7 @@
     var article_id  = "{$novel.PrimaryId}";
     var chapter_id   = "{:get_offset_value($novel.chapter.Sort)}";
 </script>
-<script src="__STATIC__/js/bookcase.js"></script>
+
 <script>
     layui.use(['jquery','layer'], function () {
         var $ = layui.jquery,layer = layui.layer;

@@ -4,7 +4,7 @@ layui.use(['layer', 'jquery'], function () {
 
     function update_cache() {
         $.ajax({
-            type: 'get',
+            type: 'post',
             url: '/update_cache',
             data: {primary_id: primary_id,last_chapter_sort: last_chapter_sort,article_url: article_url,last_chapter_url:last_chapter_url},
             dataType: 'json',

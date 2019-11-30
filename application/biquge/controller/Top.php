@@ -9,7 +9,7 @@ use org\RedisRanking\Ranking\TotalRanking;
 use org\RedisRanking\Ranking\WeeklyRanking;
 use org\RedisRanking\RankingManger;
 
-class Ranking extends Base
+class Top extends Base
 {
     protected function initialize()
     {
@@ -47,7 +47,7 @@ class Ranking extends Base
         }
 
         $this->site_seo();
-        $this->assign("current_cate",array('name' => "排行榜", 'alias' => "ranking"));
+        $this->assign("current_cate",array('name' => "排行榜", 'alias' => "top"));
         return $this->fetch('index',['ranking_list' => $ranking_list]);
     }
 
@@ -83,7 +83,7 @@ class Ranking extends Base
         }
 
         $this->site_seo();
-        $this->assign("current_cate",array('name' => "排行榜", 'alias' => "ranking"));
+        $this->assign("current_cate",array('name' => "排行榜", 'alias' => "top"));
         return $this->fetch('index',['ranking_list' => $ranking_list,'ranking_nav_list' => $ranking_nav_list,'type' => $type,'cid' => $cid]);
     }
 
