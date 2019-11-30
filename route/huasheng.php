@@ -16,7 +16,7 @@ Route::get('classify/:where', 'category/index');
 Route::get('classify', 'category/index');
 
 //章节列表
-Route::get('mulu/:id', 'article/book_list');
+Route::get('mulu/:id', 'article/mulu');
 
 Route::get('ajax/home_cid_list','index/home_cid_list');
 

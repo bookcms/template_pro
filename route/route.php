@@ -51,8 +51,5 @@ Route::get('chapter/:primary_id/:chapter_id', 'chapter/index');
 Route::get('book/:primary_id', 'article/index');
 //作者
 Route::get('author/:name', 'article/author');
-//排行榜
-Route::get('ranking', 'ranking/index');
-
 
 return [];

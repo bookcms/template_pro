@@ -2049,7 +2049,7 @@
 	padding: 20px 25px;
 	background: #fff;
 }
-.book-list h2 {
+.book-list h2,h2 a {
 	margin-bottom: 15px;
 	font-size: 22px;
 	color: #fe7031;

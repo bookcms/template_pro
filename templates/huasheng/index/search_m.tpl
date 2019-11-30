@@ -1,6 +1,4 @@
 {extend name="base_m" /}
-{block name="header"}
-{/block}
 {block name="body"}
 
 <!--header-->
@@ -21,12 +19,12 @@
         <div class="search-list">
             <div class="result"><span>“{$keyword}”</span>共<em>{$list | count}</em>个相关结果：</div>
             <ul class="clearfix">
-                {foreach $list as $item}
+                {foreach $list as $novel}
                 <li>
-                    <img class="pic" src="{$item.local_image | down_image}" alt="我的25岁美女房客" />
-                    <a class="tit" href="{:url("/book/" . $item['id'],"","html",true)}">{$item.title}</a>
-                    <p class="intro">{$item.introduction}</p>
-                    <p class="info"><span><aria>作者：</aria>{$item.author}</span><em class="type">{$item.cid | show_cid_name}</em>{eq name="$item.Full" value="1"}<em class="finish">已完结</em>{else/}<em class="serial">连载中</em>{/eq}</p>
+                    <img class="pic" src="{$novel.LocalImage | down_image}" alt="{$novel.Title}" />
+                    <a class="tit" href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Title}</a>
+                    <p class="intro">{$novel.Introduction}</p>
+                    <p class="info"><span><aria>作者：</aria>{$novel.Author}</span><em class="type">{$novel.Cid | show_cid_name}</em>{eq name="$novel.Full" value="1"}<em class="finish">已完结</em>{else/}<em class="serial">连载中</em>{/eq}</p>
                 </li>
                 {/foreach}
             </ul>

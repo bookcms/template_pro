@@ -23,7 +23,7 @@
 </div>
 <div id="main">
     <div class="path">
-        <a href="{$site_config.site_domain}" class="layui-icon i_home"></a> &gt;
+        <a href="{$site_config.mobile_domain}" class="layui-icon i_home"></a> &gt;
         <a href="{:url('/book/' .$novel['PrimaryId'],'','html',true)}">{$novel.Title}</a> &gt;
         <a href="{:url('/mulu/' .$novel['PrimaryId'],'','html',true)}">{$novel.Title}目录</a>
     </div>
@@ -52,12 +52,12 @@
 
 <div class="footer">
     <p>
-        <a href="{$site_config.site_domain}">首页</a>|
+        <a href="{$site_config.mobile_domain}">首页</a>|
         <a href="{:url('/ranking')}">排行榜</a>|
         <a href="{:url('/author/' . urlencode($novel.Author))}">{$novel.Author}</a>|
-        <a href="{:url('login/index')}">用户中心</a>
+<!--        <a href="{:url('login/index')}">用户中心</a>-->
     </p>
-    <p>Copyright &copy;2018-{:date('Y')} <a href="{$site_config.site_domain}">{$site_config.site_name}</a></p>
+    <p>Copyright &copy;2018-{:date('Y')} <a href="{$site_config.mobile_domain}">{$site_config.site_name}</a></p>
 </div>
 </body>
 </html>

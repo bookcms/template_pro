@@ -29,12 +29,21 @@ class Article extends Base
             $chapter_page_size = $this->site_config['extend']['chapter_page_list_num'];
         }
 
-        if ($this->site_config['extend']['chapter_page_list_switch'] == 'on') {
-            $article = model('article')->where('PrimaryId','eq',get_cut_value($primary_id))->cache()->find()->toArray();
-            $all_chapter_list = get_all_chapter_list($article['_id'],$article['SourceList'],$page,$chapter_page_size);
+        $article = model('article')->where('PrimaryId','eq',get_cut_value($primary_id))->cache()->find()->toArray();
+
+        //手动更新
+        if ($article['OneSelf'] == 1) {
+            if ($this->site_config['extend']['chapter_page_list_switch'] == 'on') {
+                $all_chapter_list = get_custom_all_chapter_list($article['_id'],$article['SourceList'],$page,$chapter_page_size);
+            }else {
+                $all_chapter_list = get_custom_all_chapter_list($article['_id'],$article['SourceList'],0,0);
+            }
         }else {
-            $article = model('article')->where('PrimaryId','eq',get_cut_value($primary_id))->cache()->find()->toArray();
-            $all_chapter_list = get_all_chapter_list($article['_id'],$article['SourceList'],0,0);
+            if ($this->site_config['extend']['chapter_page_list_switch'] == 'on') {
+                $all_chapter_list = get_all_chapter_list($article['_id'],$article['SourceList'],$page,$chapter_page_size);
+            }else {
+                $all_chapter_list = get_all_chapter_list($article['_id'],$article['SourceList'],0,0);
+            }
         }
 
         //获取当前分类
@@ -113,11 +122,10 @@ class Article extends Base
             $this->error("作者不能为空!");
         }
 
-        $data = curl_server("apiv2/author?name=" . $name);
-        $rand_list = curl_server("apiv2/randarticle?limit=20&is_query_chapter=false");
+        $search_list = model("article")->whereIn("Cid",get_all_sub_cid_list())->where('Author','like',$name)->order('UpdateTime','desc')->cache()->select()->toArray();
 
         $this->site_seo('author',array('author' => $name));
-        return $this->fetch('author', [ 'author' => $name,'list' => $data['data'],'rand_list' => $rand_list['data']]);
+        return $this->fetch('author', [ 'author' => $name,'list' => $search_list]);
     }
 
 
@@ -127,7 +135,7 @@ class Article extends Base
      * @return mixed
      * @throws
      */
-    public function book_list ($id = 0) {
+    public function mulu ($id = 0) {
         $article = model('article')->where('PrimaryId','eq',get_cut_value($id))->cache()->find()->toArray();
         $category = get_category($article['Cid']);
 
@@ -137,7 +145,7 @@ class Article extends Base
         $article['page'] = "";
         $this->site_seo('details',array('details' => $article,'category_name' => $category['name']));
 
-        return $this->fetch("book_list",['novel' => $article]);
+        return $this->fetch("mulu_list",['novel' => $article]);
     }
 
 

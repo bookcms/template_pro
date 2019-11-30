@@ -25,11 +25,11 @@
     </div>
     <div class="copyright">
         <p><a href="{$site_config.mobile_domain}" rel="index">{$site_config.site_name}</a>所有内容使用搜索引擎转码技术抓取自网络，如有侵犯版权，请来信告知，本站立即处理。</p>
-        <p>Powered by BookCMS v{$site_config.version} Copyright © 2018 <a href="{$site_config.site_domain}" rel="index">{$site_config.site_name}</a> All rights reserved.</p>
+        <p>Powered by BookCMS v{$site_config.version} Copyright © 2018-{:date('Y')} <a href="{$site_config.site_domain}" rel="index">{$site_config.site_name}</a> All rights reserved.</p>
     </div>
+    <div style="display: none"><?php echo $site_config['extend']['m_tong_ji']?></div>
 </div>
 <!--/footer-->
-<div style="display: none"><?php echo $site_config['extend']['m_tong_ji']?></div>
 <script type="text/javascript" src="/static/layui/layui.js"></script>
 <script type="text/javascript" src="__JS__/mobile.js"></script>
 <script>
