@@ -66,7 +66,7 @@
     </p>
 </div>
 <script src="/static/layui/layui.js" type="text/javascript"></script>
-<script src="__STATIC__/js/languages.js" type="text/javascript"></script>
+
 {block name="footer"}{/block}
 <div style="display: none">
     <?php echo $site_config['extend']['pc_tong_ji']; ?>

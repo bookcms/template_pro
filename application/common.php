@@ -107,8 +107,17 @@ function get_last_offset_sort($sort = 0,$source_list = [],$flag = ''){
     if (strpos($flag,"_")) {
         $url = "http://" . str_replace("_",".",$flag);
     }
+    $parse1 = parse_url($url);
+    if (!array_key_exists("host",$parse1)) {
+        return "";
+    }
     foreach ($source_list as $key => $source) {
-        if (parse_url($url)['host'] == parse_url($source)['host']) {
+        $parse2 = parse_url($source);
+        if (!array_key_exists("host",$parse2)) {
+            return "";
+        }
+
+        if ($parse1['host'] == $parse2['host']) {
             return $key . "_" . get_offset_value($sort);
         }
     }
@@ -570,7 +579,7 @@ function get_block_list ($block_id = 0,$limit = 10){
 }
 
 /**
- * 获取小说小气
+ * 获取小说详情
  * @param \MongoDB\BSON\ObjectId $article_id
  * @return array
  * @throws

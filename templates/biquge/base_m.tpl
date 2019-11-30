@@ -57,7 +57,7 @@
     </ul>
 </div>
 <script src="__STATIC__/layui/layui.js" type="text/javascript"></script>
-<script src="__STATIC__/js/languages.js" type="text/javascript"></script>
+
 <script type="text/javascript" src="__JS__/svg.js"></script>
 {block name="footer"}{/block}
 <div style="display: none">
