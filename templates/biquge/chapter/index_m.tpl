@@ -44,7 +44,7 @@
     <table cellpadding="0" cellspacing="0">
         <tr>
             <td class="prev">{neq name="$novel.pre_chapter" value=""}<a href="{:url('/chapter/' . $novel['PrimaryId'] . '/' . get_offset_sort($novel.pre_chapter['Sort'],$novel['SourceList'],$novel.pre_chapter['Url']),'html',true)}" target="_top" class="pre" >上一章</a>{else/}<a href="javascript:void(0)" class="pre no_pre_chapter" >暂无上一章</a>{/neq}</td>
-            <td class="mulu"><a href="{:url('/book_list/' . $novel['PrimaryId'],'html',true)}">返回目录</a></td>
+            <td class="mulu"><a href="{:url('/mulu/' . $novel['PrimaryId'],'html',true)}">返回目录</a></td>
             <td class="next">{neq name="$novel.next_chapter" value=""}<a href="{:url('/chapter/' . $novel['PrimaryId'] . '/' . get_offset_sort($novel.next_chapter['Sort'],$novel['SourceList'],$novel.next_chapter['Url']),'html',true)}" rel="next">下一章</a>{else/}<a href="javascript:void(0)" class="no_next_chapter" rel="next">暂无下一章</a>{/neq}</td>
         </tr>
     </table>
@@ -60,7 +60,7 @@
     <table cellpadding="0" cellspacing="0">
         <tr>
             <td class="prev">{neq name="$novel.pre_chapter" value=""}<a href="{:url('/chapter/' . $novel['PrimaryId'] . '/' . get_offset_sort($novel.pre_chapter['Sort'],$novel['SourceList'],$novel.pre_chapter['Url']),'html',true)}" target="_top" class="pre" >上一章</a>{else/}<a href="javascript:void(0)" class="pre no_pre_chapter" >暂无上一章</a>{/neq}</td>
-            <td class="mulu"><a href="{:url('/book_list/' . $novel['PrimaryId'],'html',true)}">返回目录</a></td>
+            <td class="mulu"><a href="{:url('/mulu/' . $novel['PrimaryId'],'html',true)}">返回目录</a></td>
             <td class="next">{neq name="$novel.next_chapter" value=""}<a href="{:url('/chapter/' . $novel['PrimaryId'] . '/' . get_offset_sort($novel.next_chapter['Sort'],$novel['SourceList'],$novel.next_chapter['Url']),'html',true)}" rel="next">下一章</a>{else/}<a href="javascript:void(0)" class="no_next_chapter" rel="next">暂无下一章</a>{/neq}</td>
         </tr>
     </table>

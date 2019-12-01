@@ -77,6 +77,49 @@ body{background:#fff;color:#999}
 .chapter li{border-bottom:1px solid #efefef;text-indent:10px;height:40px;line-height:40px;color:#999;overflow:hidden;}
 .chapter li a{display:block;}
 
+
+
+/**分页样式**/
+.pages {
+    clear: both;
+    padding: 20px 0 10px;
+    color: #888;
+    text-align: center
+}
+
+.pages li,.pages strong,.pages span {
+    display: inline-block;
+    margin: 0 3px;
+    vertical-align: middle;
+    border-bottom: none;
+}
+
+.pages a,.pages strong,.pages span {
+    display: inline-block;
+    padding: 0 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #666;
+    line-height: 20px
+}
+
+.pages a:hover,.pages .current a {
+    border: 1px solid #4dbce5;
+    background: #88C6E5;
+    color: #fff;
+    text-decoration: none
+}
+
+.pages span {
+    border: 1px solid #fff;
+    cursor: pointer
+}
+.pages li a.no_prev {
+    border: 1px solid #f0f1f2;
+    color: #bbb;
+}
+
+
 /*listpage*/
 .listpage{width:90%;margin:0 auto;height:30px;line-height:30px;overflow:hidden;padding-top:15px;padding-bottom:5px;}
 .listpage span{height:30px;line-height:30px;text-align:center;}

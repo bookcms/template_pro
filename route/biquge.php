@@ -13,6 +13,6 @@ use think\facade\Route;
 
 Route::get('sort', 'category/sort');
 //最近更新
-Route::get('last_update', 'index/last_update');
+Route::get('last_insert', 'index/last_insert');
 
 return [];

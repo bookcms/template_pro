@@ -27,7 +27,7 @@
     <div style="clear:both"></div>
     <div class="ablum_read">
         <span style="background:#FFFFFF;float:left;width:3%"></span>
-        <span class="margin_right"><a href="{:url("/book_list/" . $novel['PrimaryId'],"","html",true)}">开始阅读</a></span>
+        <span class="margin_right"><a href="{:url("/mulu/" . $novel['PrimaryId'],"","html",true)}">开始阅读</a></span>
         <span class="margin_right"> <a href="javascript:void(0);" class="add-book" data-type="rack" data-id="{$novel.PrimaryId}" >加入书架</a></span>
         <span>    <a href="javascript:void(0);" class="add-book" data-type="collect" data-id="{$novel.PrimaryId}" >加入收藏</a> </span>
     </div>
@@ -39,7 +39,7 @@
         <li> <a href="{:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($chapter['Sort'],$novel['SourceList'],$chapter['Url']),"","html",true)}">{$chapter.Title}</a></li>
         {/foreach}
     </ul>
-    <div class="intro"><a href="{:url("/book_list/" . $novel['PrimaryId'],"","html",true)}">查看完整目录</a></div>
+    <div class="intro"><a href="{:url("/mulu/" . $novel['PrimaryId'],"","html",true)}">查看完整目录</a></div>
 
 </div>
 {/block}

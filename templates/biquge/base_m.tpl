@@ -56,7 +56,7 @@
         <li><a href="{:url('/user/index')}">用户中心</a></li>
     </ul>
 </div>
-<script src="__STATIC__/layui/layui.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/layui/layui.js"></script>
 
 <script type="text/javascript" src="__JS__/svg.js"></script>
 {block name="footer"}{/block}

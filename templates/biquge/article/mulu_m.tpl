@@ -34,8 +34,11 @@
         </ul>
 
         <div id="bottom" class="read">
+            <?php echo $pages;?>
+            {eq name="$pages" value=""}
             <h3>列表结束！（底部）</h3>
             <span><a href="#intro">[返回顶部]</a></span>
+            {/eq}
         </div>
     </div>
 

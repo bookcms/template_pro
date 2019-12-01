@@ -22,7 +22,9 @@
                 <li> <a href="{:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($chapter['Sort'],$novel['SourceList'],$chapter['Url']),"","html",true)}">{$chapter.Title}</a></li>
                 {/foreach}
             </ul>
+            <?php echo $pages;?>
         </div>
+
     </div>
     <!--chapters-->
     <!--/main-->

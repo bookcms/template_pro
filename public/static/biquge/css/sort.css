@@ -143,6 +143,30 @@ body {
     color: #000
 }
 
+/*footer*/
+.footer {
+    float: left;
+    width: 100%;
+    height: 30px;
+    background: #ECF0F0;
+    padding: 3px 0 0;
+    border-top: 1px solid #f1f1f1;
+    line-height: 26px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.footer li {
+    float: left;
+    text-align: center;
+    width: 33%;
+    font-size: 16px
+}
+
+.footer li a {
+    color: #000
+}
 
 /*content*/
 .content {
@@ -382,25 +406,9 @@ body {
     color: #bbb;
 }
 
-
 .m-category ul li{
     display: inline-block;
-    width: 32%;
+    width: 48%;
     margin-top: 5px;
-}
-
-.m-category  ul li {
-    float:left;
-    width:29%;
-    margin:3px 2%;
-    text-align:center;
-}
-.m-category  ul li a {
-    padding:10px 0px;
-    display:block;
-    background-color:#fff
-}
-.m-category a span {
-    color:#999
 }
 

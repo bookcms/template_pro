@@ -24,7 +24,7 @@
     </div>
 
     <div class="ablum_read">
-        <span class="margin_right"><a href="{:url("/book_list/" . $novel['PrimaryId'],"","html",'m')}">开始阅读</a></span>
+        <span class="margin_right"><a href="{:url("/mulu/" . $novel['PrimaryId'],"","html",'m')}">开始阅读</a></span>
     </div>
     <div class="intro" id="intro" name="intro">{$novel.Title}小说简介</div>
     <div class="intro_info">{$novel.Introduction}</div>
@@ -34,7 +34,7 @@
         <li> <a href="{:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($chapter['Sort'],$novel['SourceList'],$chapter['Url']),"","html","m")}">{$chapter.Title}</a></li>
         {/foreach}
     </ul>
-    <div class="intro"><a href="{:url("/book_list/" . $novel['PrimaryId'],"","html","m")}">查看完整目录</a></div>
+    <div class="intro"><a href="{:url("/mulu/" . $novel['PrimaryId'],"","html","m")}">查看完整目录</a></div>
 
 </div>
 {/block}

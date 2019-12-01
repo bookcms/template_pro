@@ -54,4 +54,7 @@ Route::get('book/:primary_id', 'article/index');
 //作者
 Route::get('author/:name', 'article/author');
 
+//章节列表
+Route::get('mulu/:primary_id', 'article/mulu');
+
 return [];

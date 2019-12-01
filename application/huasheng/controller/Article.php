@@ -135,17 +135,59 @@ class Article extends Base
      * @return mixed
      * @throws
      */
-    public function mulu ($id = 0) {
-        $article = model('article')->where('PrimaryId','eq',get_cut_value($id))->cache()->find()->toArray();
+    public function  mulu ($primary_id = 0) {
+
+        $primary_ids = explode("_",$primary_id);
+        $page = 1;
+
+        if (count($primary_ids) > 1) {
+            $primary_id = $primary_ids[0];
+            $page = $primary_ids[1];
+        }
+
+        $article = model('article')->where('PrimaryId','eq',get_cut_value($primary_id))->cache()->find()->toArray();
         $category = get_category($article['Cid']);
 
-        $all_chapter_list = get_all_chapter_list($article['_id'],$article['SourceList'],0,0);
+        //章节列表分页大小
+        $chapter_page_size = 500;
+        if (!empty($this->site_config['extend']['chapter_page_list_num'])) {
+            $chapter_page_size = $this->site_config['extend']['chapter_page_list_num'];
+        }
+
+        //手动更新
+        if ($article['OneSelf'] == 1) {
+            if ($this->site_config['extend']['chapter_page_list_switch'] == 'on') {
+                $all_chapter_list = get_custom_all_chapter_list($article['_id'],$article['SourceList'],$page,$chapter_page_size);
+            }else {
+                $all_chapter_list = get_custom_all_chapter_list($article['_id'],$article['SourceList'],0,0);
+            }
+        }else {
+            if ($this->site_config['extend']['chapter_page_list_switch'] == 'on') {
+                $all_chapter_list = get_all_chapter_list($article['_id'],$article['SourceList'],$page,$chapter_page_size);
+            }else {
+                $all_chapter_list = get_all_chapter_list($article['_id'],$article['SourceList'],0,0);
+            }
+        }
+
         $article['chapter_list'] = $all_chapter_list['chapter_list'];
 
-        $article['page'] = "";
+        //分页
+        if ($this->site_config['extend']['chapter_page_list_switch'] == 'on') {
+            $obj_page = new Page(sprintf("mulu/%d_{PAGE}",$primary_id),$page,$all_chapter_list['chapter_total'],$chapter_page_size);
+            if (isMobileDomain()) {
+                $obj_page->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% %HEADER%');
+            }
+            $show = $obj_page->show();
+            $this->assign("pages",$show);
+        }else {
+            $this->assign("pages","");
+        }
+
+        $article['page'] = $page;
+
         $this->site_seo('details',array('details' => $article,'category_name' => $category['name']));
 
-        return $this->fetch("mulu_list",['novel' => $article]);
+        return $this->fetch("mulu",['novel' => $article]);
     }
 
 
