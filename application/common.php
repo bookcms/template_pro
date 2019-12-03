@@ -424,6 +424,28 @@ function get_random_list ($cid = 0,$limit = 10) {
 }
 
 /**
+ * 获取作者其他书籍
+ * @param string $author 作者名称
+ * @param int $limit 条数
+ * @param int $cid 分类id
+ * @return array
+ * @throws
+ */
+function get_author_list ($author = '',$limit = 10,$cid = 0) {
+
+    if ($cid == 0) {
+        $cid_list =  get_all_sub_cid_list();
+    }else {
+        $category = get_category($cid);
+        $cid_list = $category['cid_list'];
+    }
+
+    $list = model("article")->whereIn("Cid",$cid_list)->where('Author','like',$author)->order('UpdateTime','desc')->cache()->select()->toArray();
+
+    return $list;
+}
+
+/**
  * 获取所有排行榜数据
  * @param int $cid 分类id
  * @param int $limit

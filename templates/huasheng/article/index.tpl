@@ -93,6 +93,20 @@
             </div>
             <!--new-book-->
             <div class="new-book">
+                <h3>作者其他</h3>
+                <ul>
+                    {author_list author="$novel.Author" limit="5"}
+                    <li>
+                        <a class="pic" title="{$author.Title}" href="{:url("/book/" . $author['PrimaryId'],"","html",true)}"><img src="{$author.LocalImage | down_image}" alt="{$author.Title}"></a>
+                        <h5><a href="{:url("/book/" . $author['PrimaryId'],"","html",true)}" title="{$author.Title}">{$author.Title}</a></h5>
+                        <p>分类：{$author.Cid | show_cid_name}</p>
+                        <p>状态：{eq name="$author.Full" value="1"}已完结{else/}连载中{/eq}</p>
+                    </li>
+                    {/author_list}
+                </ul>
+            </div>
+            <!--new-book-->
+            <div class="new-book">
                 <h3>推荐小说</h3>
                 <ul>
                     {random_list cid="$novel.Cid" limit="5"}

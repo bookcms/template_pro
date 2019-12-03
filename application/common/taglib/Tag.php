@@ -28,6 +28,7 @@ class Tag extends TagLib
         'ranking_list' => ['attr' => 'cid,limit,name', 'close' => 1],
         'cid_ranking_list' => ['attr' => 'cid,limit,name', 'close' => 1],
         'random_list' => ['attr' => 'cid,limit', 'close' => 1],
+        'author_list' => ['attr' => 'author,limit', 'close' => 1],
         'hot_full_list' => ['attr' => 'limit', 'close' => 1],
     ];
 
@@ -95,6 +96,43 @@ EOF;
             \$__LIST__ = get_random_list($cid,$limit);
             if(is_array(\$__LIST__)):
                 foreach(\$__LIST__ as \$index => \$random):
+            ?>
+EOF;
+
+        $parse .= $content;
+        $parse .= '<?php endforeach; ?>';
+        $parse .= '<?php endif; ?>';
+        return $parse;
+    }
+
+    /**
+     * 作者书籍列表
+     * @param $tag
+     * @param $content
+     * @return string
+     */
+    public function tagAuthor_list($tag, $content) {
+        $limit = isset($tag['limit']) ? $tag['limit'] : 8;
+        $author = isset($tag['author']) ? $tag['author'] : "''";
+        $cid = isset($tag['cid']) ? $tag['cid'] : "''";
+
+        //分类id
+        if (!empty($cid)) {
+            $cid  = $this->autoBuildVar($cid);
+        }
+        $cid = (int)$cid;
+
+        if (!empty($author)) {
+            $author  = $this->autoBuildVar($author);
+        }
+
+        $parse = <<<EOF
+
+        <?php
+
+            \$__LIST__ = get_author_list($author,$limit,$cid);
+            if(is_array(\$__LIST__)):
+                foreach(\$__LIST__ as \$index => \$author):
             ?>
 EOF;
 
