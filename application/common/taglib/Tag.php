@@ -28,7 +28,7 @@ class Tag extends TagLib
         'ranking_list' => ['attr' => 'cid,limit,name', 'close' => 1],
         'cid_ranking_list' => ['attr' => 'cid,limit,name', 'close' => 1],
         'random_list' => ['attr' => 'cid,limit', 'close' => 1],
-        'author_list' => ['attr' => 'author,limit', 'close' => 1],
+        'author_list' => ['attr' => 'author,cid,limit', 'close' => 1],
         'hot_full_list' => ['attr' => 'limit', 'close' => 1],
     ];
 
