@@ -17,4 +17,9 @@ Route::get('classify', 'category/index');
 
 Route::get('ajax/home_cid_list','index/home_cid_list');
 
+//资讯
+Route::get('news/list_:page', 'news/index');
+Route::get('news/:id', 'news/detail');
+Route::get('news', 'news/index');
+
 return [];

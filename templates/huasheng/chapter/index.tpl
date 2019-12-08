@@ -68,7 +68,7 @@
             <div class="chapter-box">
                 <ul class="clearfix">
                     {foreach $novel.chapter_list as $item}
-                    <li {eq name="$novel.chapter.Sort" value="$item.Sort"}class="hover"{/eq} ><a target="_self" href="" title="{$item.Title}">{$item.Title}</a></li>
+                    <li {eq name="$novel.chapter.Sort" value="$item.Sort"}class="hover"{/eq} ><a target="_self" href="{:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($item['Sort'],$novel['SourceList'],$item['Url']),"","html",true)}" title="{$item.Title}">{$item.Title}</a></li>
                     {/foreach}
                 </ul>
             </div>

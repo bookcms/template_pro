@@ -27,6 +27,8 @@ class Tag extends TagLib
         'slide_list' => ['attr' => 'limit', 'close' => 1],
         'ranking_list' => ['attr' => 'cid,limit,name', 'close' => 1],
         'cid_ranking_list' => ['attr' => 'cid,limit,name', 'close' => 1],
+        'hot_new_list' => ['attr' => 'cid,limit', 'close' => 1],
+        'random_new_list' => ['attr' => 'limit', 'close' => 1],
         'random_list' => ['attr' => 'cid,limit', 'close' => 1],
         'author_list' => ['attr' => 'author,cid,limit', 'close' => 1],
         'hot_full_list' => ['attr' => 'limit', 'close' => 1],
@@ -73,6 +75,64 @@ EOF;
         $parse .= '<?php endif; ?>';
         return $parse;
     }
+
+    /**
+     * 热门资讯
+     * @param $tag
+     * @param $content
+     * @return string
+     */
+    public function tagHot_new_list($tag, $content) {
+        $limit = isset($tag['limit']) ? $tag['limit'] : 8;
+        $cid = isset($tag['cid']) ? $tag['cid'] : 0;
+
+        //分类id
+        if (!empty($cid)) {
+            $cid  = $this->autoBuildVar($cid);
+        }
+
+        $parse = <<<EOF
+
+        <?php
+
+            \$__LIST__ = get_hot_news_list($cid,$limit);
+            if(is_array(\$__LIST__)):
+                foreach(\$__LIST__ as \$index => \$hot_new):
+            ?>
+EOF;
+
+        $parse .= $content;
+        $parse .= '<?php endforeach; ?>';
+        $parse .= '<?php endif; ?>';
+        return $parse;
+    }
+
+    /**
+     * 随机资讯
+     * @param $tag
+     * @param $content
+     * @return string
+     */
+    public function tagRandom_new_list($tag, $content) {
+        $limit = isset($tag['limit']) ? $tag['limit'] : 8;
+
+        $parse = <<<EOF
+
+        <?php
+
+            \$__LIST__ = get_random_new_list($limit);
+            if(is_array(\$__LIST__)):
+                foreach(\$__LIST__ as \$index => \$random_new):
+            ?>
+EOF;
+
+        $parse .= $content;
+        $parse .= '<?php endforeach; ?>';
+        $parse .= '<?php endif; ?>';
+        return $parse;
+    }
+
+
 
     /**
      * 随机数据

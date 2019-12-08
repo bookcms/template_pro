@@ -470,6 +470,88 @@ function get_redis_all_ranking_list ($cid = 0,$limit = 10,$name = "top") {
 }
 
 /**
+ * 热门资讯
+ * @param int $cid
+ * @param int $limit
+ * @return array
+ */
+function get_hot_news_list ($cid = 0,$limit = 10) {
+    return get_redis_news_cid_ranking_list($cid,$limit,"top");
+}
+
+/**
+ * 随机资讯
+ * @param int $cid 资讯分类
+ * @param int $limit 条数
+ * @return array
+ * @throws
+ */
+function get_random_new_list ($cid= 0,$limit = 10) {
+
+    $site_config = get_site_config();
+
+    $model = model('news')->where("SiteId",$site_config['site_id']);
+
+    if ($cid != 0) {
+        $model = $model->where('Cid',$cid);
+    }
+
+    $random_num = rand(1,$model->count());
+
+    $list = $model->where("NewsId","lt",$random_num)->order('Sort','DESC')->order('NewsId','DESC')->limit($limit)->select()->toArray();
+
+    return $list;
+}
+
+
+/**
+ * 从redis获取资讯排行榜数据
+ * @param int $cid 分类id
+ * @param int $limit 条数
+ * @param string $name 排行榜标识
+ * @return array
+ * @throws
+ */
+function get_redis_news_cid_ranking_list ($cid = 0,$limit = 10,$name = ""){
+
+    //排行榜计数
+    $rankingManager = (new RankingManger())->setDataSource(new DummyDayDataSource())->setRankingClasses([TotalRanking::class])->setRankingName(sprintf("%s_%d",$name,$cid))->init();
+    $top_list_key = $rankingManager->totalRanking->top($limit);
+    $block_list = model('news')->whereIn('NewsId',array_keys($top_list_key))->limit($limit)->cache()->select()->toArray();
+
+    $top_list = [];
+    foreach (array_keys($top_list_key) as $top_key) {
+        foreach ($block_list as $item) {
+            if ($item['NewsId'] == get_offset_value($top_key)) {
+                $top_list[] = $item;
+            }
+        }
+    }
+
+    return $top_list;
+}
+
+/**
+ * 添加资讯排行榜数据
+ * @param int $id 资讯id
+ * @param int $cid 分类id
+ * @param string $ranking_name 排行榜类型
+ * @return string
+ */
+function add_redis_news_cid_ranking ($id = 0,$cid = 0,$ranking_name = ""){
+    $cache_key = sprintf("news_ranking_%s_%s",$id,Request::ip());
+    if (Cache::has($cache_key)) {
+        return false;
+    }else {
+        //24小时算一次点击
+        Cache::set($cache_key,$id,86400);
+        $rankingManager = (new RankingManger())->setDataSource(new DummyDayDataSource())->setRankingClasses([TotalRanking::class])->setRankingName(sprintf("%s_%d",$ranking_name,$cid))->init();
+        return $rankingManager->totalRanking->add($id,1);
+    }
+}
+
+
+/**
  * 热门全本
  * @param int $limit
  * @return array
@@ -546,6 +628,33 @@ function add_redis_cid_ranking ($primaryId = 0,$cid = 0,$ranking_name = ""){
 function get_novel_click ($primaryId = 0){
     $rankingManager = (new RankingManger())->setDataSource(new DummyDayDataSource())->setRankingClasses([TotalRanking::class])->setRankingName("novel_click")->init();
     return $rankingManager->totalRanking->score($primaryId);
+}
+
+/**
+ * 获取资讯点击 在模板中调用
+ * @param int $id
+ * @return int|null
+ */
+function show_news_click ($id = 0){
+    $rankingManager = (new RankingManger())->setDataSource(new DummyDayDataSource())->setRankingClasses([TotalRanking::class])->setRankingName("news_click")->init();
+    return $rankingManager->totalRanking->score(get_cut_value($id));
+}
+
+/**
+ * 设置资讯点击量
+ * @param int $id
+ * @return string
+ */
+function set_news_click ($id = 0){
+    $cache_key = sprintf("news_click_%s_%s",$id,Request::ip());
+    if (Cache::has($cache_key)) {
+        return false;
+    }else {
+        //24小时算一次点击
+        Cache::set($cache_key,$id,86400);
+        $rankingManager = (new RankingManger())->setDataSource(new DummyDayDataSource())->setRankingClasses([TotalRanking::class])->setRankingName("news_click")->init();
+        return $rankingManager->totalRanking->add($id,1);
+    }
 }
 
 /**
@@ -779,10 +888,12 @@ function down_image($url = '') {
     $domain_arr = explode('.',$domain);
 
     if (is_array($domain_arr)) {
+        if (empty($url)) {
+            return sprintf("//img.%s.%s/%s",$domain_arr[1],$domain_arr[2],str_replace("uploads/","","no_pic.jpg"));
+        }
         return sprintf("//img.%s.%s/%s",$domain_arr[1],$domain_arr[2],str_replace("uploads/","",$url));
     }
 
-    return "/static/nopic.gif";
 }
 
 

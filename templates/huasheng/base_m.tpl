@@ -19,6 +19,7 @@
 <div class="footer">
     <div class="links">
         <a href="{$site_config.mobile_domain}">首页</a>
+        <a href="{:url("/news","","html",true)}">资讯</a>
         <a href="{:url("/top","","html",true)}">排行榜</a>
         <a href="{:url("/classify","","html",true)}">小说库</a>
 <!--        <a href="{:url("/user","","html",true)}">用户中心</a>-->

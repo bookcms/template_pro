@@ -20,6 +20,7 @@
         <div class="nav">
             <ul class="clearfix">
                 <li {eq name="$current_page" value="home" }class="on"{/eq}><a href="{$site_config.site_domain}">首页</a></li>
+                <li {eq name="$current_page" value="news" }class="on"{/eq}><a href="{:url("/news")}">资讯</a></li>
                 <li {eq name="$current_page" value="classify" }class="on"{/eq}><a href="{:url("/classify")}">小说库</a></li>
                 <li {eq name="$current_page" value="full" }class="on"{/eq}><a href="{:url("/full")}">全本</a></li>
                 <li {eq name="$current_page" value="top" }class="on"{/eq}><a href="{:url("/top")}">排行榜</a></li>

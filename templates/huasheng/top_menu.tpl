@@ -21,6 +21,7 @@
     <div class="menu-panel">
         <div class="menu-list">
             <a href="{$site_config.mobile_domain}"><img src="__IMAGES__/nav-home.png" alt="首页" /><span>首页</span></a>
+            <a href="{:url("/news","","html",true)}"><img  class="nav-img" src="__IMAGES__/nav-news.png" alt="资讯" /><span>资讯</span></a>
             <a href="{:url("/top","","html",true)}"><img  class="nav-img" src="__IMAGES__/nav-top.png" alt="排行榜" /><span>排行榜</span></a>
             <a href="{:url("/classify","","html",true)}"><img class="nav-img" src="__IMAGES__/nav-book.png" alt="小说库" /><span>小说库</span></a>
         </div>
