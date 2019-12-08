@@ -106,13 +106,3 @@
 </div>
 <!--/container-->
 {/block}
-{block name="footer"}
-<script>
-    if($("#hit_act").val()){
-        console.log($("#hit_act").val());
-        $.get("/ajax",{ act:"hit_record", type:$("#hit_act").val(),aid: $("#aid").val()},function(data){
-            console.log(data);
-        });
-    }
-</script>
-{/block}

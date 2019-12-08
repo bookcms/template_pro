@@ -116,7 +116,30 @@ class Base extends Common
                     $description = trim(str_replace(array('{site_name}'), array($site_config['site_name']), $seo['item']['description']));
                 }
                 break;
+            } else if (($seo['alias'] == "news_detail" && $seo_type == $seo['alias']) ) {  //资讯详情
+                if(!empty($seo['item']['title'])){
+                    $site_title = trim(str_replace(array('{site_name}','{title}','{chapter_title}'), array($site_config['site_name'],$param['title'],$param['chapter_title']), $seo['item']['title']));
+                }
+                if(!empty($seo['item']['keywords'])){
+                    $keywords = trim(str_replace(array('{site_name}','{title}','{chapter_title}'), array($site_config['site_name'],$param['title'],$param['chapter_title']), $seo['item']['keywords']));
+                }
+                if(!empty($seo['item']['description'])){
+                    $description = trim(str_replace(array('{site_name}','{title}','{chapter_title}','{introduction}'), array($site_config['site_name'],$param['title'],$param['chapter_title'],$param['introduction']), $seo['item']['description']));
+                }
+                break;
+            }else if (($seo['alias'] == "news_list" && $seo_type == $seo['alias']) ) {  //资讯列表
+                if(!empty($seo['item']['title'])){
+                    $site_title = trim(str_replace(array('{site_name}','{page}'), array($site_config['site_name'],$param['page']), $seo['item']['title']));
+                }
+                if(!empty($seo['item']['keywords'])){
+                    $keywords = trim(str_replace(array('{site_name}','{page}'), array($site_config['site_name'],$param['page']), $seo['item']['keywords']));
+                }
+                if(!empty($seo['item']['description'])){
+                    $description = trim(str_replace(array('{site_name}','{page}'), array($site_config['site_name'],$param['page']), $seo['item']['description']));
+                }
+                break;
             }
+
 
         }
         $site_seo = array(
