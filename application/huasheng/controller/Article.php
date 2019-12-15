@@ -89,11 +89,11 @@ class Article extends Base
 
         //分页
         if ($this->site_config['extend']['chapter_page_list_switch'] == 'on') {
-            $page = new Page(sprintf("book/%d_{PAGE}",$primary_id),$page,$all_chapter_list['chapter_total'],$chapter_page_size);
+            $pageObj = new Page(sprintf("book/%d_{PAGE}",$primary_id),$page,$all_chapter_list['chapter_total'],$chapter_page_size);
             if (isMobileDomain()) {
-                $page->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% %HEADER%');
+                $pageObj->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% %HEADER%');
             }
-            $show = $page->show();
+            $show = $pageObj->showPc();
             $this->assign("pages",$show);
         }else {
             $this->assign("pages","");

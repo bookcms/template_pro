@@ -1,0 +1,837 @@
+/* 全局 */
+html, body {
+    overflow-x: hidden;
+}
+
+i {
+    font-style: normal;
+}
+
+/* 系统 */
+::-webkit-input-placeholder {
+    color: #c2c2c2
+}
+
+/* 辅助 */
+a:hover {
+    color: #71b3dd;
+    transition: all .3s;
+    text-decoration: none !important;
+}
+
+.layui-container {
+    padding: 0 !important;
+    width: 980px !important;
+    margin: 0 auto !important;
+    clear: both;
+    overflow: hidden
+}
+
+.layui-container .layui-nav {
+    /*background-color: #FBFBFB;*/
+}
+
+/*.layui-container .layui-nav .layui-this > a {*/
+/*    background-color: #69A8C8;*/
+/*}*/
+
+.fly-main {
+    width: 1079px;
+    min-height: 600px;
+    margin: 0 auto 15px;
+}
+
+.layui-badge {
+    height: 20px;
+    line-height: 20px;
+    border-radius: 2px;
+}
+
+.fly-link {
+    color: #01AAED;
+}
+
+.fly-link:hover {
+    color: #5FB878;
+}
+
+.fly-grey {
+    color: #999;
+}
+
+.fly-msg, .fly-error {
+    padding: 10px 15px;
+    line-height: 24px;
+}
+
+.fly-msg {
+    background-color: #F8F8F8;
+    color: #666;
+}
+
+.fly-msg a {
+    color: #4F99CF
+}
+
+.fly-error {
+    color: #FF5722;
+}
+
+.fly-editbox {
+    position: relative;
+}
+
+.fly-marginTop {
+    margin-top: 100px !important;
+}
+
+.fly-mid {
+    display: inline-block;
+    height: 10px;
+    width: 1px;
+    margin: 0 10px;
+    vertical-align: middle;
+    background-color: #e2e2e2;
+}
+
+.fly-right {
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.fly-imagecode {
+    position: relative;
+    margin-top: -12px;
+    cursor: pointer;
+}
+
+/* 过度 */
+.fly-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -15px;
+    font-size: 30px;
+    color: #c2c2c2;
+}
+
+/* 头像 */
+.fly-avatar {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.fly-avatar img {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    border-radius: 2px;
+}
+
+/* 徽章 */
+.fly-badge-vip {
+    height: 16px;
+    line-height: 16px;
+    padding: 0 3px;
+    background-color: #FF5722;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.fly-badge-accept {
+    height: 18px;
+    line-height: 18px;
+    padding: 0 5px !important;
+    background-color: #5FB878;
+    border-radius: 2px;
+}
+
+/* 图标 */
+.icon-touxiang {
+    display: inline-block;
+    font-size: 34px;
+}
+
+.icon-qq, .icon-weibo {
+    font-size: 30px;
+}
+
+.icon-renzheng {
+    position: relative;
+    color: #FFB800;
+}
+
+.icon-kiss {
+    font-size: 18px;
+}
+
+.icon-pinglun1 {
+    position: relative;
+    top: 2px;
+}
+
+.icon-alipay {
+    position: relative;
+    color: #3AA1FB;
+    font-size: 24px;
+}
+
+.icon-weixinzhifu {
+    position: relative;
+    color: #40AF3A;
+}
+
+.icon-liwu {
+    color: #FF5722;
+}
+
+.fly-layui-user .layui-nav-child {
+    left: auto;
+    right: 0;
+    min-width: 0;
+    width: 120px;
+}
+
+/* 面板 */
+.fly-panel {
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.fly-panel[pad20] {
+    padding: 20px;
+}
+
+.fly-panel-title {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    border-bottom: 1px dotted #E9E9E9;
+    color: #333;
+    border-radius: 2px 2px 0 0;
+    font-size: 14px;
+}
+
+.fly-panel-main {
+    padding: 10px 15px;
+}
+
+.fly-panel-border {
+    border: 1px solid #e6e6e6;
+    box-shadow: none;
+}
+
+.fly-panel-border .fly-panel-title {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+
+@media screen and (min-width: 768px) {
+    .fly-topline {
+        height: 166px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .fly-topline {
+        height: 141px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .fly-topline {
+        height: 172px;
+    }
+}
+
+/* 用户中心 */
+body .fly-user-main {
+    position: relative;
+    min-height: 600px;
+}
+
+.fly-user-main > .layui-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.fly-user-main > .layui-nav .layui-nav-item a {
+    color: #666;
+}
+
+.fly-user-main > .layui-nav .layui-this,.layui-nav-tree .layui-this > a {
+    background-color: #71b3dd !important;
+    color: #fff !important;
+}
+.fly-user-main > .layui-nav-tree .layui-nav-item a:hover {
+    background-color: #71b3dd !important;
+}
+
+.layui-tab-brief > .layui-tab-title .layui-this {
+    color: #71b3dd !important;
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+    border:none;
+    border-radius:0;
+    border-bottom:2px solid #71b3dd !important;
+}
+
+.fly-user-main > .layui-nav i {
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.fly-user-main > .fly-panel {
+    min-height: 600px;
+    margin-left: 210px;
+}
+
+.fly-user-main .fly-none {
+    min-height: 0;
+}
+
+.fly-panel-user[pad20] {
+    padding-top: 5px;
+}
+
+.fly-form-app {
+    margin-top: 30px;
+}
+
+.fly-form-app .iconfont {
+    font-size: 26px;
+    padding: 0 5px;
+}
+
+.fly-form-app .icon-qq {
+    color: #7CA9C9
+}
+
+.fly-form-app .icon-weibo {
+    color: #E6162D
+}
+
+.user-tab {
+    margin: 20px 0;
+}
+
+.user-about {
+    position: relative;
+    padding: 0 0 0px 20px;
+    border-left: 1px solid #DFDFDF;
+    text-align: center;
+}
+
+.user-about .user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.user-about p {
+    line-height: 30px;
+}
+
+.user-about p span {
+    padding: 0 5px;
+    color: #999;
+}
+
+/* 个人主页 */
+.fly-home {
+    position: relative;
+    padding: 30px 0 30px;
+    text-align: center;
+}
+
+.fly-home img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.fly-home h1 {
+    font-size: 26px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+.fly-home h1 span {
+    font-size: 14px;
+    color: #999;
+}
+
+.fly-home h1 .icon-nan {
+    color: #4EBBF9
+}
+
+.fly-home h1 .icon-nv {
+    color: #F581B1
+}
+
+.fly-home-sign {
+    padding: 0 10px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.fly-home .icon-renzheng {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    top: 45px;
+    left: -15px;
+    background-color: #FFB800;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.fly-home-info i {
+    padding-right: 5px;
+    padding-left: 10px;
+    color: #666;
+}
+
+.fly-home-info span {
+    color: #999;
+}
+
+.fly-sns {
+    margin-top: 20px;
+}
+
+.fly-home-jie .jie-row,
+.fly-home-da .home-jieda {
+    min-height: 500px;
+    padding: 5px 20px;
+}
+
+/*.home-jieda li{margin-bottom:20px; padding-bottom:10px; line-height:24px; border-bottom: 1px dotted #DFDFDF;}*/
+.home-jieda li {
+    margin-bottom: 20px;
+    line-height: 24px;
+}
+
+.home-dacontent {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #F2F2F5;
+    border-radius: 5px;
+    word-wrap: break-word;;
+}
+
+.home-dacontent pre {
+    background-color: #F2F2F5;
+}
+
+.home-dacontent img {
+    max-width: 100%;
+}
+
+.home-jieda li a {
+    padding: 0 5px;
+    color: #4F99CF;
+}
+
+.home-jieda li p {
+    color: #999;
+}
+
+.home-jieda li p span {
+    padding-right: 5px;
+}
+
+/* 快捷方式 */
+.fly-shortcut {
+    margin: 5px 0;
+}
+
+.fly-shortcut li {
+    text-align: center;
+}
+
+.fly-shortcut li .layui-icon {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 30px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.fly-shortcut li cite {
+    position: relative;
+    top: 2px;
+    display: block;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.fly-shortcut li:hover .layui-icon {
+    opacity: 0.9;
+}
+
+.fly-shortcut li .layui-icon {
+    background-color: #2F9688;
+}
+
+/* 我的消息 */
+#LAY-minemsg {
+    min-height: 420px;
+}
+
+.mine-msg li {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 10px 0 5px;
+    line-height: 24px;
+    border-bottom: 1px dotted #E9E9E9
+}
+
+.mine-msg li cite {
+    padding: 0 5px;
+    color: #4F99CF;
+}
+
+.mine-msg li i {
+    color: #4F99CF;
+    padding-right: 5px;
+}
+
+.mine-msg li > p {
+    position: relative;
+    margin-top: 5px;
+    line-height: 26px;
+    text-align: right;
+}
+
+.mine-msg li > p span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #999;
+}
+
+.mine-msg li .fly-delete {
+    position: relative;
+    top: -3px;
+}
+
+.mine-msg li .layui-elem-quote p[download] {
+    padding: 10px 0 5px;
+}
+
+/* 设置 */
+.avatar-add {
+    position: relative;
+    width: 373px;
+    height: 373px;
+    background-color: #F2F2F5;
+}
+
+.avatar-add .upload-img {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    margin: 0 0 0 -56px;
+}
+
+.avatar-add img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 168px;
+    height: 168px;
+    margin: -50px 0 0 -84px;
+    border-radius: 100%;
+}
+
+.avatar-add .loading {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0;
+    background-color: #000;
+    opacity: 0.5;
+    filter: Alpha(opacity=50);
+}
+
+.avatar-add p {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    margin-top: 10px;;
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
+
+.app-bind li {
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #999;
+}
+
+.app-bind li .iconfont {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+    font-size: 28px;
+}
+
+.app-bind .app-havebind {
+    color: #333;
+}
+
+.app-bind .app-havebind .icon-qq {
+    color: #7CA9C9
+}
+
+.app-bind .app-havebind .icon-weibo {
+    color: #E6162D
+}
+
+/* 结算 */
+.fly-form-btn {
+    width: 160px;
+    margin: 0 10px 10px 0;
+}
+
+.fly-form-btn.layui-this {
+    border-color: #FF5722;
+    color: #FF5722;
+}
+
+.fly-form-btn + .fly-form-btn {
+    margin-left: 0;
+}
+
+.fly-bill-tips {
+    line-height: 26px;
+    padding: 15px;
+    font-size: 13px;
+    background-color: #f6f6f6;
+    color: #FF5722;
+}
+
+
+/* 会员专区 */
+.fly-vipclub {
+    height: 100px;
+    background-color: #393D49;
+    color: #fff;
+    text-align: center;
+}
+
+.fly-vipclub h1 {
+    line-height: 100px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.fly-vipclub h1 a {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .fly-main {
+        width: 100%;
+    }
+
+    /* 顶边距 */
+    .fly-marginTop {
+        margin-top: 0;
+    }
+
+    /* 头部 */
+    .fly-header .fly-nav-user li .fly-nav-avatar {
+        padding-right: 15px;
+    }
+
+    .fly-header .fly-nav-user {
+        margin-right: 5px;
+    }
+
+    /* 专栏 */
+    .fly-column {
+        height: auto;
+    }
+
+    .fly-column ul {
+        padding: 10px;
+        font-size: 0;
+    }
+
+    .fly-column ul li {
+        float: left;
+        width: 33.33%;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        vertical-align: middle;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .fly-column-right {
+        right: 10px;
+    }
+
+    .fly-column ul li.layui-this:after {
+        display: none;
+    }
+
+    /* 页脚 */
+    .fly-footer {
+        margin-top: 0;
+        border-top: none;
+    }
+
+    /* 分页 */
+    .laypage-main a, .laypage-main span {
+        display: none;
+    }
+
+    .laypage-main .laypage-prev,
+    .laypage-main .laypage-curr,
+    .laypage-main .laypage-next {
+        display: inline-block;
+    }
+
+    /* 列表 */
+    .fly-list li h2 a {
+        max-width: 72%;
+    }
+
+    /* Detail 页 */
+    .fly-admin-box {
+        display: block;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .fly-detail-info .fly-list-nums {
+        top: -2px;
+    }
+
+    .fly-edit span {
+        border-right: none;
+    }
+
+    /* 组件平台 */
+    .fly-extend-banner-search .layui-input {
+        width: 180px;
+    }
+
+    .fly-extend-list-header .fly-extend-title {
+        padding-right: 50px;
+    }
+
+    /* 案例 */
+    .fly-case-list,
+    .fly-case-list li {
+        width: 100%;
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+    }
+
+    .fly-case-img {
+        text-align: center;
+    }
+
+    .fly-case-img img {
+        max-width: 100%;
+    }
+
+    .fly-case-banner {
+        width: 300px;
+        margin-left: -150px;
+    }
+
+    body .fly-user-main {
+        width: auto;
+    }
+
+    .fly-user-main > .layui-nav {
+        left: -300px;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+    }
+
+    .fly-user-main > .fly-panel-user {
+        width: auto;
+        margin-left: 0;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+    }
+
+    .site-tree-mobile {
+        display: block !important;
+        position: fixed;
+        z-index: 100000;
+        bottom: 20px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 2px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .7);
+        color: #fff;
+    }
+
+    .site-mobile .site-tree-mobile {
+        display: none !important;
+    }
+
+    .site-mobile .fly-user-main > .layui-nav {
+        left: 0;
+    }
+
+    .site-mobile .site-mobile-shade {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .9);
+        z-index: 999;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    body .header .layui-nav .layui-nav-item {
+        margin: 0 5px;
+    }
+}

@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="stylesheet" type="text/css" href="__CSS__/ranking_m.css" />
+    <link rel="stylesheet" type="text/css" href="__CSS__/top_m.css" />
 </head>
 <body>
 <header class="channelHeader">

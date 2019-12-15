@@ -7,7 +7,7 @@ use Carbon\Carbon;
 /**
  * 月排行榜
  *
- * @package Zqhong\RedisRanking\Ranking
+ * @package Zqhong\RedisRanking\Top
  */
 class MonthlyRanking extends Ranking
 {

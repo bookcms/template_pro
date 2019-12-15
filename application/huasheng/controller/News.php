@@ -27,12 +27,12 @@ class News extends Base
 
         $list = $model->limit($offset,$page_size)->order('UpdateTime','DESC')->cache()->select()->toArray();
 
-        $pages = new Page("news/list_{PAGE}",$page,$total,$page_size);
+        $pageObj = new Page("news/list_{PAGE}",$page,$total,$page_size);
         if (isMobileDomain()) {
-            $pages->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE%');
-            $show = $pages->showMobile();
+            $pageObj->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE%');
+            $show = $pageObj->showMobile();
         }else {
-            $show = $pages->show();
+            $show = $pageObj->showPc();
         }
 
         $this->assign("pages",$show);

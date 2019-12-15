@@ -7,7 +7,7 @@ use Carbon\Carbon;
 /**
  * 年排行榜
  *
- * @package Zqhong\RedisRanking\Ranking
+ * @package Zqhong\RedisRanking\Top
  */
 class YearlyRanking extends Ranking
 {

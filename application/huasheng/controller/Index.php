@@ -87,13 +87,13 @@ class Index extends Base
         $list = $article_model->limit($offset,$page_size)->order('PrimaryId','desc')->cache()->select()->toArray();
 
         //分页
-        $page = new Page(sprintf("%s_{PAGE}",$this->request->action()),$page,$total,$page_size);
+        $pageObj = new Page(sprintf("%s_{PAGE}",$this->request->action()),$page,$total,$page_size);
 
         if (isMobileDomain()) {
-            $page->setConfig("theme",'%UP_PAGE% %DOWN_PAGE% %HEADER%');
+            $pageObj->setConfig("theme",'%UP_PAGE% %DOWN_PAGE% %HEADER%');
         }
 
-        $this->assign("pages",$page->show());
+        $this->assign("pages",$pageObj->showPc());
 
         $this->site_seo('full');
         return $this->fetch("full",['list' => $list,"current_page" => 'full']);

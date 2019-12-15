@@ -8,6 +8,8 @@
     <link href="/favicon.ico" rel="shortcut icon" />
     {block name="mip"}{/block}
     {block name="header"}{/block}
+    <script src="/static/js/uaredirect.js" type="text/javascript"></script>
+    {block name="uaredirect"}{/block}
     <link href="/static/layui/css/layui.css" rel="stylesheet" type="text/css" />
     <link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
     <link href="__CSS__/pc.css" rel="stylesheet" type="text/css" />
@@ -27,7 +29,7 @@
             </ul>
         </div>
         <div class="search">
-            <form  method="get" name="search"  action="{:url("/search","","",true)}">
+            <form  method="get" name="search"  action="{:url("/search")}">
                 <input type="text" name="k" id="q"  placeholder="请输入书名/作者/标签" class="search-key">
                 <button type="submit" class="search-btn" id="search-btn">搜索</button>
             </form>

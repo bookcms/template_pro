@@ -393,6 +393,8 @@ function get_cid_block_list ($cid = 0,$limit = 10){
 function get_ad ($alias = '') {
     if ($alias == '') return '';
     $config = get_site_config();
+    if (empty($config['ad_list']))return  "";
+
     foreach ($config['ad_list'] as $ad) {
         if ($ad['alias'] == trim($alias)) return $ad['content'];
     }

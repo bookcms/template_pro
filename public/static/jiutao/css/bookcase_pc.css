@@ -1,0 +1,164 @@
+.container {
+    width: 980px;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden
+}
+
+.list_center {
+    margin-top: 5px;
+    border: 1px solid #d8d8d8;
+    border-top: 0;
+    background: #fcfcfc
+}
+
+.list_center .title {
+    border-right: 0;
+    border-bottom: 1px solid #d8d8d8;
+    border-left: none
+}
+
+.list_center .title {
+    border-right: 0;
+    border-bottom: 1px solid #d8d8d8;
+    border-left: none
+}
+
+.title {
+    height: 36px;
+    background: #F8FDFE;
+    line-height: 36px;
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    border-top: 2px solid #88C6E5
+}
+
+.title em {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    font-style: normal
+}
+
+.label {
+    height: 18px;
+    width: 4px;
+    background: #88C6E5;
+    margin-left: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 2px
+}
+
+.label,.coverecom h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 2px
+}
+
+.coverecom em {
+    padding-left: 10px;
+    font-weight: bold;
+    font-style: normal
+}
+
+.details {
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    background: #fff
+}
+.inner {
+    margin: 10px 0;
+    clear: both;
+    overflow: hidden;
+    background-color: #fff;
+}
+.item-cover {
+    float: left;
+    margin: 15px 11px 0 12px;
+    display: inline;
+    width: 134px;
+    height: 198px;
+    overflow: hidden;
+    color: #888;
+    position: relative;
+}
+
+.item-cover:last-child {
+    margin-bottom: 15px;
+}
+
+.item-cover a {
+    text-decoration: none;
+}
+
+.item-cover a img {
+    padding: 2px;
+    border: 1px solid #ddd;
+    width: 128px;
+    height: 162px;
+}
+
+.item-cover a:hover img {
+    border: 1px solid #f99800;
+}
+
+.item-cover h3 {
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    font-weight: normal;
+    text-align: center;
+}
+
+.bookcase ul {
+    padding: 15px 0;
+}
+
+.bookcase li {
+    border-bottom: solid 1px #DDDDDD;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}
+
+.bookcase li span {
+    float: left;
+    display: inline-block;
+}
+
+.bookcase li .s1 {
+    width: 12%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.bookcase li .s2 {
+    width: 20%;
+    overflow: hidden;
+}
+
+.bookcase li .s3 {
+    width: 33%;
+    overflow: hidden;
+}
+
+.bookcase li .s4 {
+    width: 15%;
+    overflow: hidden;
+}
+
+.bookcase li .s5 {
+    color: red;
+    width: 10%;
+    overflow: hidden;
+}
+
+.bookcase li .s6 {
+    width: 10%;
+    overflow: hidden;
+}
+
+.bookcase li a {
+    color: #6F78A7;
+}

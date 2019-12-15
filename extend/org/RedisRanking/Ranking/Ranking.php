@@ -5,7 +5,7 @@ namespace org\RedisRanking\Ranking;
 use Predis\Client;
 
 /**
- * Class Ranking
+ * Class Top
  *
  * @package Zqhong\RedisRanking
  */

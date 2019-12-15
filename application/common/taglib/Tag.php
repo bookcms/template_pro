@@ -256,7 +256,7 @@ EOF;
 
             \$__LIST__ = get_redis_cid_ranking_list($cid,"$limit","$name");
             if(is_array(\$__LIST__)):
-                foreach(\$__LIST__ as \$index => \$ranking):
+                foreach(\$__LIST__ as \$index => \$top):
             ?>
 EOF;
 

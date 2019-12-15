@@ -56,5 +56,7 @@ Route::get('author/:name', 'article/author');
 
 //章节列表
 Route::get('mulu/:primary_id', 'article/mulu');
+//最近更新
+Route::get('last_update', 'index/last_update');
 
 return [];

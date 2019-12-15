@@ -109,12 +109,12 @@ class Category extends Base
         $list = $model->limit($offset,$page_size)->order('UpdateTime','DESC')->cache()->select()->toArray();
 
         //分页
-        $pages = new Page(sprintf("classify/%s_%d_%d_{PAGE}",$where_arr[0],$current_update_time,$current_status),$page,$total,$page_size);
+        $pageObj = new Page(sprintf("classify/%s_%d_%d_{PAGE}",$where_arr[0],$current_update_time,$current_status),$page,$total,$page_size);
         if (isMobileDomain()) {
-            $pages->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% ');
-            $show = $pages->showMobile();
+            $pageObj->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% ');
+            $show = $pageObj->showMobile();
         }else {
-            $show = $pages->show();
+            $show = $pageObj->showPc();
         }
 
         $this->assign("pages",$show);

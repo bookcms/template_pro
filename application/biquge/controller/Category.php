@@ -33,11 +33,11 @@ class Category extends Base
         //区块
         $novel_list['block'] = get_redis_cid_ranking_list($this->current_cate['cid'],30,"top");
 
-        $page = new Page(sprintf("%s_{PAGE}", $this->current_cate['alias']), $page, $total, $page_size);
+        $pageObj = new Page(sprintf("%s_{PAGE}", $this->current_cate['alias']), $page, $total, $page_size);
         if (isMobileDomain()) {
-            $page->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% %HEADER%');
+            $pageObj->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% %HEADER%');
         }
-        $show = $page->show();
+        $show = $pageObj->showPc();
         $this->assign("pages",$show);
 
         $this->site_seo('category',array('category' => $this->current_cate));

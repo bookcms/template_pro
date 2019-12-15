@@ -22,7 +22,7 @@
     </div>
     <!-- search -->
     <div class="bar">
-        <form method="get" name="search" action="{:url("/search","","",true)}">
+        <form method="get" name="search" action="{:url("/search")}">
             <input type="text" name="k" id="q" placeholder="请输入书名/作者" class="search-key">
             <button type="submit" class="search-btn" id="search-btn">Go</button>
         </form>
