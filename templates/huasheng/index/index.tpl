@@ -52,7 +52,7 @@
                 {block_list block_id="1"}
                 {eq name="$index" value="0"}
                 <div class="carousel-img">
-                    <a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank" title="{$block.Title}"><img class="lazy" src="{$block.LocalImage | down_image}" alt="{$block.Title}"></a>
+                    <a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank" title="{$block.Title}"><img class="lazy" src="{$block.LocalImage | down_image}"  onerror="this.src='__IMAGES__/nopic.gif'" alt="{$block.Title}"></a>
                 </div>
                 <ul class="carousel-nav">
                     <li>
@@ -71,7 +71,7 @@
                     {block_list block_id="1"}
                     {gt name="$index" value="0"}
                     <li>
-                        <a class="pic" href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$block.LocalImage | down_image}" alt="{$block.Title}" /></a>
+                        <a class="pic" href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" onerror="this.src='__IMAGES__/nopic.gif'" src="{$block.LocalImage | down_image}" alt="{$block.Title}" /></a>
                         <h5 class="tit"><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank">{$block.Title}</a></h5>
                         <p class="intro">{$block.Introduction}</p>
                         <p class="info">作者：<a href="{:url('/author/' . urlencode($block.Author) )}"><span>{$block.Author}</span></a><em>{$block.Cid | show_cid_name}</em></p>
@@ -114,7 +114,7 @@
                     {ranking_list limit="7"}
                     {gt name="$index" value="0"}
                     <li>
-                        <a class="pic" href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$ranking.LocalImage | down_image}" alt="{$ranking.Title}" /></a>
+                        <a class="pic" href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$ranking.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$ranking.Title}" /></a>
                         <h5 class="tit"><a href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank">{$ranking.Title}</a></h5>
                         <p class="intro">{$ranking.Introduction}</p>
                         <p class="info">作者：<a href="{:url('/author/' . urlencode($ranking.Author) )}"><span>{$ranking.Author}</span></a><em>{$ranking.Cid | show_cid_name}</em></p>

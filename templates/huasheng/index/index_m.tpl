@@ -43,7 +43,7 @@
                 {block_list block_id="1"}
                 <li>
                     <a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}">
-                        <img class="lazy" src="{$block.LocalImage | down_image}" alt="{$block.Title}"/>
+                        <img class="lazy" src="{$block.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$block.Title}"/>
                         <span>{$block.Title}</span>
                         <em><aria>作者：</aria>{$block.Author}</em>
                     </a>
@@ -63,7 +63,7 @@
                 {ranking_list limit="10"}
                 <li>
                     <a href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}">
-                    <img class="lazy" src="{$ranking.LocalImage | down_image}" alt="{$ranking.Title}"/>
+                    <img class="lazy" src="{$ranking.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$ranking.Title}"/>
                     <span>{$ranking.Title}</span>
                     <em><aria>作者：</aria>{$ranking.Author}</em>
                     </a>
@@ -85,7 +85,7 @@
             <ul class="clearfix">
                 {novel_list cid_list="$category.cid_list" limit="5"}
                 <li>
-                    <img class="pic lazy" src="{$novel.LocalImage | down_image}" alt="{$novel.Title}"/>
+                    <img class="pic lazy" src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$novel.Title}"/>
                     <a class="tit" href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Title}</a>
                     <p class="intro">{$novel.Introduction}</p>
                     <p class="info"><span><aria>作者：</aria>{$novel.Author}</span><em class="type">{$novel.Cid | show_cid_name}</em>  {eq name="$novel.Full" value="1"}<em class="finish">已完结</em>{else/}<em class="serial">连载中</em>{/eq}</p>
@@ -107,7 +107,7 @@
             <ul class="clearfix">
                 {foreach $last_insert_list as $novel}
                 <li>
-                    <img class="pic lazy" src="{$novel.LocalImage | down_image}" alt="{$novel.Title}"/>
+                    <img class="pic lazy" src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$novel.Title}"/>
                     <a class="tit" href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Title}</a>
                     <p class="intro">{$novel.Introduction}</p>
                     <p class="info"><span><aria>作者：</aria>{$novel.Author}</span><em class="type">{$novel.Cid | show_cid_name}</em>  {eq name="$novel.Full" value="1"}<em class="finish">已完结</em>{else/}<em class="serial">连载中</em>{/eq}</p>
