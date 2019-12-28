@@ -477,8 +477,8 @@
 }
 .box3 .latest-news ul li {
 	position: relative;
-	height: 32px;
-	line-height: 32px;
+	height: 40px;
+	line-height: 40px;
 	border-top: 1px dashed #ebebeb;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -522,9 +522,9 @@
 .box3 .hot-tags p span {
 	float: left;
 	width: 130px;
-	height: 32px;
-	line-height: 32px;
-	font-size: 14.5px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 15px;
 	border-top: 1px dashed #ebebeb;
 	border-radius: 2px;
 	white-space: nowrap;
