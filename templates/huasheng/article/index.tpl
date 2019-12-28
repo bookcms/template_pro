@@ -6,7 +6,9 @@
     <meta http-equiv="mobile-agent" content="format=html5; url={:url("/book/" . $novel['PrimaryId'],"","html","m")}" />
     <meta http-equiv="mobile-agent" content="format=xhtml; url={:url("/book/" . $novel['PrimaryId'],"","html","m")}" />
 {/block}
-
+{block name="uaredirect"}
+<script type="text/javascript">uaredirect('{:url("/book/" . $novel['PrimaryId'],array(),"html","m")}');</script>
+{/block}
 {block name="body"}
 <!--container-->
 <div class="container clearfix">
@@ -23,7 +25,7 @@
             <!--bsse-->
             <dl class="base clearfix">
                 <dt>
-                    <img src="{$novel.LocalImage | down_image}" alt="{$novel.Title}">
+                    <img src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$novel.Title}">
                     {eq name="$novel.Full" value="1"}<i class="finish">已完结</i>{else/}<i class="serial">连载中</i>{/eq}
                 </dt>
                 <dd>
@@ -97,7 +99,7 @@
                 <ul>
                     {author_list author="$novel.Author" limit="5"}
                     <li>
-                        <a class="pic" title="{$author.Title}" href="{:url("/book/" . $author['PrimaryId'],"","html",true)}"><img src="{$author.LocalImage | down_image}" alt="{$author.Title}"></a>
+                        <a class="pic" title="{$author.Title}" href="{:url("/book/" . $author['PrimaryId'],"","html",true)}"><img src="{$author.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$author.Title}"></a>
                         <h5><a href="{:url("/book/" . $author['PrimaryId'],"","html",true)}" title="{$author.Title}">{$author.Title}</a></h5>
                         <p>分类：{$author.Cid | show_cid_name}</p>
                         <p>状态：{eq name="$author.Full" value="1"}已完结{else/}连载中{/eq}</p>
@@ -111,7 +113,7 @@
                 <ul>
                     {random_list cid="$novel.Cid" limit="5"}
                     <li>
-                        <a class="pic" title="{$random.Title}" href="{:url("/book/" . $random['PrimaryId'],"","html",true)}"><img src="{$random.LocalImage | down_image}" alt="{$random.Title}"></a>
+                        <a class="pic" title="{$random.Title}" href="{:url("/book/" . $random['PrimaryId'],"","html",true)}"><img src="{$random.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$random.Title}"></a>
                         <h5><a href="{:url("/book/" . $random['PrimaryId'],"","html",true)}" title="{$random.Title}">{$random.Title}</a></h5>
                         <p>分类：{$random.Cid | show_cid_name}</p>
                         <p>状态：{eq name="$random.Full" value="1"}已完结{else/}连载中{/eq}</p>

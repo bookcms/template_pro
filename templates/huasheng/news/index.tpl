@@ -1,6 +1,4 @@
 {extend name="base" /}
-{block name="header"}
-{/block}
 {block name="body"}
 <!--container-->
 <div class="container clearfix">
@@ -16,7 +14,7 @@
             <ul class="list">
                 {foreach $list as $news}
                 <li>
-                    <a class="pic" title="{$news.Title}" href="{:url("/news/" . $news['NewsId'],"","html",true)}" target="_blank"><img class="lazy" src="{$news.LocalImage | down_image}" alt="{$news.Title}"></a>
+                    <a class="pic" title="{$news.Title}" href="{:url("/news/" . $news['NewsId'],"","html",true)}" target="_blank"><img class="lazy" src="{$news.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$news.Title}"></a>
                     <h5 class="tit"><a href="{:url("/news/" . $news['NewsId'],"","html",true)}" target="_blank">{$news.Title}</a></h5>
                     <p class="info"><span>发布时间：<em>{$news.CreateTime | date="Y-m-d"}</em></span><span>编辑：{$news.Author}</span></p>
                     <p class="text">{$news.Introduction}</p>

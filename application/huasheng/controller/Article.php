@@ -177,7 +177,7 @@ class Article extends Base
             if (isMobileDomain()) {
                 $obj_page->setConfig("theme",'%NO_PREV% %UP_PAGE% %DOWN_PAGE% %HEADER%');
             }
-            $show = $obj_page->show();
+            $show = $obj_page->showMobile();
             $this->assign("pages",$show);
         }else {
             $this->assign("pages","");

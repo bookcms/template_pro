@@ -1,6 +1,10 @@
 {extend name="base" /}
+{block name="uaredirect"}
+<script type="text/javascript">uaredirect('{:url("/author/" . urlencode($author),array(),"html","m")}');</script>
+{/block}
 {block name="body"}
-<!--/header--><!--container-->
+<!--/header-->
+<!--container-->
 <div class="container clearfix">
     <div class="bread">
         <span>您的位置 : </span>

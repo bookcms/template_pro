@@ -8,7 +8,6 @@
 {block name="uaredirect"}
 <script type="text/javascript">uaredirect("{:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($novel.chapter['Sort'],$novel['SourceList'],$novel.chapter['Url']),array(),"html","m")}");</script>
 {/block}
-
 {block name="body"}
 <!--container-->
 <div class="chapter-container w960">

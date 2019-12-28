@@ -18,7 +18,7 @@
         <div class="book-info">
             <dl class="base clearfix">
                 <dt>
-                    <img class="lazy" src="{$novel.LocalImage | down_image}" alt="{$novel.Title}" />
+                    <img class="lazy" src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$novel.Title}" />
                     {eq name="$novel.Full" value="1"}<i class="finish">已完结</i>{else/}<i class="serial">连载中</i>{/eq}
                 </dt>
                 <dd>
@@ -74,7 +74,7 @@
             <ul class="clearfix">
                 {random_list cid="$novel.Cid" limit="5"}
                 <li>
-                    <img class="pic lazy" src="{$random.LocalImage | down_image}" alt="{$random.Title}" />
+                    <img class="pic lazy" src="{$random.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$random.Title}" />
                     <a class="tit" href="{:url("/book/" . $random['PrimaryId'])}">{$random.Title}</a>
                     <p class="intro">{$random.Introduction}</p>
                     <p class="info"><span><aria>作者：</aria>{$random.Author}</span><em class="type">{$random.Cid | show_cid_name}</em>{eq name="$random.Full" value="1"}<em class="finish">已完结</em>{else/}<em class="serial">连载中</em>{/eq}</p>

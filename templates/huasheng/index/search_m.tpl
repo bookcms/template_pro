@@ -21,7 +21,7 @@
             <ul class="clearfix">
                 {foreach $list as $novel}
                 <li>
-                    <img class="pic" src="{$novel.LocalImage | down_image}" alt="{$novel.Title}" />
+                    <img class="pic" src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$novel.Title}" />
                     <a class="tit" href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}">{$novel.Title}</a>
                     <p class="intro">{$novel.Introduction}</p>
                     <p class="info"><span><aria>作者：</aria>{$novel.Author}</span><em class="type">{$novel.Cid | show_cid_name}</em>{eq name="$novel.Full" value="1"}<em class="finish">已完结</em>{else/}<em class="serial">连载中</em>{/eq}</p>

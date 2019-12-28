@@ -1,5 +1,6 @@
 {extend name="base" /}
-{block name="header"}
+{block name="uaredirect"}
+<script type="text/javascript">uaredirect("{:url('/top',array(),'html','m')}");</script>
 {/block}
 {block name="body"}
 <!--container-->
@@ -21,7 +22,7 @@
                         {eq name="$key" value="0"}
                         <li class="s{$key + 1}">
                             <em class="num">{$key + 1}</em>
-                            <a class="pic" href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$novel.LocalImage | down_image}" alt="{$novel.Title}"></a>
+                            <a class="pic" href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$novel.Title}"></a>
                             <h5 class="tit"><a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}" target="_blank">{$novel.Title}</a></h5>
                             <p class="author">作者：{$novel.Author}</p>
                             <p class="status">状态：{eq name="$novel.Full" value="0"}连载中{else/}已完结{/eq}</p>

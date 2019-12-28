@@ -19,7 +19,7 @@
             {neq name="$news.Article" value=""}
             <dl class="base clearfix">
                 <dt>
-                    <img class="lazy" src="{$news.Article.LocalImage | down_image}" alt="{$news.Article.Title}" />
+                    <img class="lazy" src="{$news.Article.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$news.Article.Title}" />
                     {eq name="$news.Article.Full" value="1"}<i class="finish">已完结</i>{else/}<i class="serial">连载中</i>{/eq}
                 </dt>
                 <dd>

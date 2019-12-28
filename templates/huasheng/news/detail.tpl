@@ -25,7 +25,7 @@
 
             {neq name="$news.Article" value=""}
             <div class="cover">
-                <p class="pic"><a title="{$news.Article.Title}" href="{:url("/book/" . $news['Article']['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$news.Article.LocalImage | down_image}" alt="{$news.Article.Title}"></a></p>
+                <p class="pic"><a title="{$news.Article.Title}" href="{:url("/book/" . $news['Article']['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$news.Article.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$news.Article.Title}"></a></p>
                 <p class="stars">推荐指数：<span class="star"><i style="width:80%;">8分</i></span></p>
                 <p class="read"><a href="{:url("/book/" . $news['Article']['PrimaryId'],"","html",true)}" target="_blank">{$news.Article.Title}在线阅读全文</a></p>
             </div>
@@ -40,7 +40,7 @@
             {neq name="$news.Article" value=""}
             <div class="book">
                 <dl class="clearfix">
-                    <dt><a href="{:url("/book/" . $news['Article']['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$news.Article.LocalImage | down_image}" alt="{$news.Article.Title}"></a></dt>
+                    <dt><a href="{:url("/book/" . $news['Article']['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$news.Article.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$news.Article.Title}"></a></dt>
                     <dd>
                         <h4>{$news.Article.Title}</h4>
                         <p class="info"><span>作者：{$news.Article.Author}</span><span>类型：{$news.Article.Cid | show_cid_name}</span><span>状态：{eq name="$news.Article.Full" value="1"}已完结{else/}连载中{/eq}</span></p>
@@ -92,7 +92,7 @@
                 <ul>
                     {random_list limit="10"}
                     <li>
-                        <a class="pic" title="{$random.Title}" href="{:url("/book/" . $random['PrimaryId'],"","html",true)}"><img src="{$random.LocalImage | down_image}" alt="{$random.Title}"></a>
+                        <a class="pic" title="{$random.Title}" href="{:url("/book/" . $random['PrimaryId'],"","html",true)}"><img src="{$random.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$random.Title}"></a>
                         <h5><a href="{:url("/book/" . $random['PrimaryId'],"","html",true)}" title="{$random.Title}">{$random.Title}</a></h5>
                         <p>分类：{$random.Cid | show_cid_name}</p>
                         <p>状态：{eq name="$random.Full" value="1"}已完结{else/}连载中{/eq}</p>

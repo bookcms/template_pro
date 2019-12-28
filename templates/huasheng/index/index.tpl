@@ -3,6 +3,9 @@
     <meta http-equiv="mobile-agent" content="format=html5; url={$site_config.mobile_domain}" />
     <meta http-equiv="mobile-agent" content="format=xhtml; url={$site_config.mobile_domain}" />
 {/block}
+{block name="uaredirect"}
+<script type="text/javascript">uaredirect("{$site_config.mobile_domain}");</script>
+{/block}
 {block name="body"}
 <!--container-->
 <div class="container clearfix">
@@ -52,7 +55,7 @@
                 {block_list block_id="1"}
                 {eq name="$index" value="0"}
                 <div class="carousel-img">
-                    <a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank" title="{$block.Title}"><img class="lazy" src="{$block.LocalImage | down_image}" alt="{$block.Title}"></a>
+                    <a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank" title="{$block.Title}"><img class="lazy" src="{$block.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$block.Title}"></a>
                 </div>
                 <ul class="carousel-nav">
                     <li>
@@ -71,7 +74,7 @@
                     {block_list block_id="1"}
                     {gt name="$index" value="0"}
                     <li>
-                        <a class="pic" href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$block.LocalImage | down_image}" alt="{$block.Title}" /></a>
+                        <a class="pic" href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$block.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$block.Title}" /></a>
                         <h5 class="tit"><a href="{:url("/book/" . $block['PrimaryId'],"","html",true)}" target="_blank">{$block.Title}</a></h5>
                         <p class="intro">{$block.Introduction}</p>
                         <p class="info">作者：<a href="{:url('/author/' . urlencode($block.Author) )}"><span>{$block.Author}</span></a><em>{$block.Cid | show_cid_name}</em></p>
@@ -96,7 +99,7 @@
             <div id="carousel2" class="carousel">
                 {ranking_list limit="1"}
                 <div class="carousel-img">
-                    <a href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank" title="{$ranking.Title}"><img class="lazy" src="{$ranking.LocalImage | down_image}" alt="{$ranking.Title}"></a>
+                    <a href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank" title="{$ranking.Title}"><img class="lazy" src="{$ranking.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$ranking.Title}"></a>
                 </div>
                 <ul class="carousel-nav">
                     <li>
@@ -114,7 +117,7 @@
                     {ranking_list limit="7"}
                     {gt name="$index" value="0"}
                     <li>
-                        <a class="pic" href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$ranking.LocalImage | down_image}" alt="{$ranking.Title}" /></a>
+                        <a class="pic" href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$ranking.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$ranking.Title}" /></a>
                         <h5 class="tit"><a href="{:url("/book/" . $ranking['PrimaryId'],"","html",true)}" target="_blank">{$ranking.Title}</a></h5>
                         <p class="intro">{$ranking.Introduction}</p>
                         <p class="info">作者：<a href="{:url('/author/' . urlencode($ranking.Author) )}"><span>{$ranking.Author}</span></a><em>{$ranking.Cid | show_cid_name}</em></p>
@@ -150,7 +153,7 @@
             <ul class="clearfix home_cid_list">
                 {foreach $last_update_list as $novel}
                 <li>
-                    <a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$novel.LocalImage | down_image}" alt="{$novel.Title}"><span>{$novel.Title}</span></a>
+                    <a href="{:url("/book/" . $novel['PrimaryId'],"","html",true)}" target="_blank"><img class="lazy" src="{$novel.LocalImage | down_image}" onerror="this.src='__IMAGES__/nopic.gif'" alt="{$novel.Title}"><span>{$novel.Title}</span></a>
                     {eq name="$novel.Full" value="1"}<i class="finish">已完结</i>{else/}<i class="serial">连载中</i>{/eq}
                 </li>
                 {/foreach}
