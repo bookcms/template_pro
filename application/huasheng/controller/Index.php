@@ -4,6 +4,7 @@ namespace app\huasheng\controller;
 use app\common\controller\Common;
 use org\Page;
 use org\SiteMap;
+use think\facade\Cache;
 use think\facade\Config;
 use think\facade\Env;
 use think\facade\Request;
@@ -61,20 +62,29 @@ class Index extends Base
 
     /**
      * 搜索
-     * @param string $k 关键字
+     * @param string $keyword 关键字
      * @return mixed
      * @throws
      */
-    public function search ($k = '')
+    public function search ($keyword = '')
     {
-        if (empty($k)) {
+        if (empty($keyword)) {
             $this->error("搜索关键字不能为空！");
         }
 
-        $search_list = model("article")->whereIn("Cid",get_all_sub_cid_list())->whereOr('Title','like',trim($k))->whereOr('Author','like',trim($k))->order('UpdateTime','desc')->cache()->select()->toArray();
+        $search_list = model("article")->whereIn("Cid",get_all_sub_cid_list())->whereOr('Title','like',trim($keyword))->whereOr('Author','like',trim($keyword))->order('UpdateTime','desc')->cache()->select()->toArray();
 
-        $this->site_seo('search',['keyword' => $k]);
-        return $this->fetch("search",['keyword' => $k,'list' => $search_list]);
+        $user_id = 0;
+        if (Cache::has("user_info")) {
+            $user_info = Cache::get("user_info");
+            $user_id = $user_info['id'];
+        }
+
+        //后台搜索统计
+        curl_server("api_v1/add_top_search",array('user_id' => $user_id,'keyword' => $keyword,"platform" => 'pc','ip' => $this->request->ip()));
+
+        $this->site_seo('search',['keyword' => $keyword]);
+        return $this->fetch("search",['keyword' => $keyword,'list' => $search_list]);
     }
 
 

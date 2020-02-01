@@ -23,10 +23,10 @@ class Common extends Controller
 
         $this->assign("site_config", $this->site_config);
 
-        $runtime_path = Env::get('runtime_path');
-        if ( delete_dir_file(	$runtime_path . 'temp/') ) {
-//            echo "del";
-        }
+//        $runtime_path = Env::get('runtime_path');
+//        if ( delete_dir_file(	$runtime_path . 'temp/') ) {
+////            echo "del";
+//        }
 
     }
 

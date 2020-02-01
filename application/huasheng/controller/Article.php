@@ -29,7 +29,12 @@ class Article extends Base
             $chapter_page_size = $this->site_config['extend']['chapter_page_list_num'];
         }
 
-        $article = model('article')->where('PrimaryId','eq',get_cut_value($primary_id))->cache()->find()->toArray();
+        $article = model('article')->where('PrimaryId','eq',get_cut_value($primary_id))->cache()->find();
+        if (empty($article)) {
+            return $this->error("小说不存在!");
+        }else {
+            $article = $article->toArray();
+        }
 
         //手动更新
         if ($article['OneSelf'] == 1) {
