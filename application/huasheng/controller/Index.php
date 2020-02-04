@@ -62,17 +62,17 @@ class Index extends Base
 
     /**
      * 搜索
-     * @param string $keyword 关键字
+     * @param string $k 关键字
      * @return mixed
      * @throws
      */
-    public function search ($keyword = '')
+    public function search ($k = '')
     {
-        if (empty($keyword)) {
+        if (empty($k)) {
             $this->error("搜索关键字不能为空！");
         }
 
-        $search_list = model("article")->whereIn("Cid",get_all_sub_cid_list())->whereOr('Title','like',trim($keyword))->whereOr('Author','like',trim($keyword))->order('UpdateTime','desc')->cache()->select()->toArray();
+        $search_list = model("article")->whereIn("Cid",get_all_sub_cid_list())->whereOr('Title','like',trim($k))->whereOr('Author','like',trim($k))->order('UpdateTime','desc')->cache()->select()->toArray();
 
         $user_id = 0;
         if (Cache::has("user_info")) {
@@ -81,10 +81,10 @@ class Index extends Base
         }
 
         //后台搜索统计
-        curl_server("api_v1/add_top_search",array('user_id' => $user_id,'keyword' => $keyword,"platform" => 'pc','ip' => $this->request->ip()));
+        curl_server("api_v1/add_top_search",array('user_id' => $user_id,'keyword' => $k,"platform" => 'pc','ip' => $this->request->ip()));
 
-        $this->site_seo('search',['keyword' => $keyword]);
-        return $this->fetch("search",['keyword' => $keyword,'list' => $search_list]);
+        $this->site_seo('search',['keyword' => $k]);
+        return $this->fetch("search",['keyword' => $k,'list' => $search_list]);
     }
 
 
