@@ -94,7 +94,7 @@ class User extends Base
             'collect' => '收藏'
         );
 
-        $data['id'] = get_cut_value($data['id']);
+        $data['novel_id'] = get_cut_value($data['id']);
         $data['platform'] = 'pc';
         $data['token'] = session("login_token");
 
@@ -326,7 +326,7 @@ class User extends Base
     public function delete_book (){
 
         if ($this->request->isPost()) {
-            $data = $this->request->only(['book_id','act_type']);
+            $data = $this->request->only(['novel_id','act_type']);
             $data['book_id'] = get_cut_value($data['book_id']);
             $data['platform'] = 'pc';
             $data['token'] = session("login_token");

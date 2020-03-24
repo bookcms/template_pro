@@ -224,7 +224,7 @@ script.addEventListener('load', function(){
                         size = 30;
                         $('.size li').eq(1).addClass('disabled');
                     }
-                    $('.content p').css('font-size', size+'px');
+                    $('.content').css('font-size', size+'px');
                     window.localStorage.setItem('size', size);
                 }
                 setsize();
