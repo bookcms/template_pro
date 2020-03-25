@@ -43,6 +43,8 @@ class Common extends Controller
         $domain = explode('.',$domain);
         if (is_array($domain) && $domain[0] == 'm') {
             $template .= '_m';
+        }else if (is_array($domain) && $domain[0] == 'mip') {
+            $template .= '_mip';
         }
         return parent::fetch($template, $vars, $config);
     }
