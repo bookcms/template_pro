@@ -54,6 +54,7 @@
     </ul>
 </div>
 
+<script src="https://cdn.bootcss.com/jquery/1.7/jquery.min.js"></script>
 <script language="javascript" type="text/javascript" src="__JS__/lazyload_m.js"></script>
 <script type="text/javascript" src="__JS__/svg.js"></script>
 <script type="text/javascript" language="javascript">
