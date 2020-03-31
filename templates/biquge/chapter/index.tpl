@@ -2,6 +2,7 @@
 {block name="header"}
     <meta http-equiv="mobile-agent" content="format=html5; url={:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($novel.chapter['Sort'],$novel['SourceList'],$novel.chapter['Url']),"","html","m")}" />
     <meta http-equiv="mobile-agent" content="format=xhtml; url={:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($novel.chapter['Sort'],$novel['SourceList'],$novel.chapter['Url']),"","html","m")}" />
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
 {/block}
 {block name="uaredirect"}
     <script type="text/javascript">uaredirect("{:url("/chapter/" . $novel['PrimaryId'] . "/" . get_offset_sort($novel.chapter['Sort'],$novel['SourceList'],$novel.chapter['Url']),array(),"html","m")}");</script>

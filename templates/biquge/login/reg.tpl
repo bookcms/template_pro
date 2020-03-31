@@ -75,11 +75,12 @@
             $.post("{:url('/login/check')}", {type:type, value:value,}, function (info) {
                     if (info.code == -1) {
                         if (info.data == "username") {
-
+                            layer.msg("用户名已存在!");
+                            return;
                         }
 
                     }
-                    console.log(result);
+                    console.log(info);
                 }
             )
         }
@@ -104,9 +105,10 @@
                 data: $(data.form).serialize(),
                 dataType:"json",
                 success: function (info) {
+
                     if (info.code == 0) {
                         setTimeout(function () {
-                            location.href = info.data;
+                           location.href = info.data;
                         }, 1000);
                     }else  {
                         $(".verify-code").val("");

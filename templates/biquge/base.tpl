@@ -13,7 +13,6 @@
     {block name="header"}{/block}
     <script src="/static/js/uaredirect.js" type="text/javascript"></script>
     {block name="uaredirect"}{/block}
-    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="__JS__/header.js"></script>
 </head>
 <body>
