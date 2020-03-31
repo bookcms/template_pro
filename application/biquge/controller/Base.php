@@ -166,6 +166,18 @@ INFO;
                     $description = trim(str_replace(array('{site_name}','{keyword}'), array($site_config['site_name'],$param['keyword']), $seo['item']['description']));
                 }
                 break;
+            }else if (($seo['alias'] == "full" && $seo_type == $seo['alias']) || $seo['alias'] == "top" && $seo_type == $seo['alias']) { //全本 和 排行榜
+
+                if(!empty($seo['item']['title'])){
+                    $site_title = trim(str_replace(array('{site_name}'), array($site_config['site_name']), $seo['item']['title']));
+                }
+                if(!empty($seo['item']['keywords'])){
+                    $keywords = trim(str_replace(array('{site_name}'), array($site_config['site_name']), $seo['item']['keywords']));
+                }
+                if(!empty($seo['item']['description'])){
+                    $description = trim(str_replace(array('{site_name}'), array($site_config['site_name']), $seo['item']['description']));
+                }
+                break;
             }
 
         }

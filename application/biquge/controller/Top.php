@@ -46,7 +46,7 @@ class Top extends Base
             );
         }
 
-        $this->site_seo();
+        $this->site_seo("top");
         $this->assign("current_cate",array('name' => "排行榜", 'alias' => "top"));
         return $this->fetch('index',['ranking_list' => $ranking_list]);
     }
@@ -82,7 +82,7 @@ class Top extends Base
             $ranking_list = get_cid_block_list($cid,10);
         }
 
-        $this->site_seo();
+        $this->site_seo("top");
         $this->assign("current_cate",array('name' => "排行榜", 'alias' => "top"));
         return $this->fetch('index',['ranking_list' => $ranking_list,'ranking_nav_list' => $ranking_nav_list,'type' => $type,'cid' => $cid]);
     }

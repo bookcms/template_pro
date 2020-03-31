@@ -1,14 +1,8 @@
 <?php
 namespace app\biquge\controller;
 
-use app\common\controller\Common;
 use org\Page;
-use org\SiteMap;
-use think\Db;
 use think\facade\Cache;
-use think\facade\Config;
-use think\facade\Env;
-use think\facade\Request;
 
 class Index extends Base
 {
