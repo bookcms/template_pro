@@ -349,7 +349,7 @@ function get_flag_name ($url = ''){
  */
 function get_offset_value ($value = 0){
     $site_config = get_site_config();
-    return (int)$site_config['sort'] + (int)$value;
+    return (int)$site_config['site_id'] + (int)$value;
 }
 
 /**
@@ -359,7 +359,7 @@ function get_offset_value ($value = 0){
  */
 function get_cut_value ($value = 0){
     $site_config = get_site_config();
-    return (int)((int)$value - (int)$site_config['sort']);
+    return (int)((int)$value - (int)$site_config['site_id']);
 }
 
 /**
@@ -742,7 +742,7 @@ function get_site_config (){
 
     foreach ($site_config['category_list'] as &$category) {
         $category['cid_list'] = array_map('intval', explode(',',$category['cid_list']));
-        $category['cid'] = (int)$category['cid'] + (int)$site_config['sort'];
+        $category['cid'] = (int)$category['cid'] + (int)$site_config['site_id'];
     }
 
     //自定义排序

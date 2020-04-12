@@ -22,7 +22,7 @@ class News extends Base
         $page_size = 15; //页码大小
         $offset = ((int)$page - 1) * $page_size;
 
-        $model = model("news")->where(['Status' => 1,"SiteId" => $this->site_config['site_id']]);
+        $model = model("news")->where(['Status' => 1,"SiteId" => (int)$this->site_config['site_id']]);
         $total = $model->count();
 
         $list = $model->limit($offset,$page_size)->order('UpdateTime','DESC')->cache()->select()->toArray();
