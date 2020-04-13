@@ -57,5 +57,8 @@
 </script>
 <script src="__JS__/function.js"></script>
 {block name="footer"}{/block}
+<div style="display: none">
+    <?php echo $site_config['extend']['pc_tong_ji']; ?>
+</div>
 </body>
 </html>

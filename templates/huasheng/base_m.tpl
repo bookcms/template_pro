@@ -47,5 +47,8 @@
     });
 </script>
 {block name="footer"}{/block}
+<div style="display: none">
+    <?php echo $site_config['extend']['m_tong_ji']; ?>
+</div>
 </body>
 </html>

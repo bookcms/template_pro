@@ -1,4 +1,7 @@
 {extend name="base_m" /}
+{block name="header"}
+<link rel="stylesheet" href="//unpkg.com/swiper/css/swiper.min.css">
+{/block}
 {block name="body"}
 <!--header-->
 <div class="header">
@@ -8,10 +11,10 @@
 <!--wrap-->
 <div class="wrap">
     <!--slide-->
-    <div class="swiper-container layui-carousel" id="swiper">
-        <div carousel-item class="swiper-slide">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
             {foreach $site_config.slide_list as $item }
-            <a target="{$item.target}" {eq name="$item.url" value=""}href="javascript:void(0)"{else/}href="{$item.url}"{/eq}><img src="{$item.image | down_image}" alt="{$item.name}" /><span>{$item.name}</span></a>
+            <div class="swiper-slide"><a target="{$item.target}" {eq name="$item.url" value=""}href="javascript:void(0)"{else/}href="{$item.url}"{/eq}><img src="{$item.image | down_image}" alt="{$item.name}" /><span>{$item.name}</span></a></div>
             {/foreach}
         </div>
     </div>
@@ -119,23 +122,15 @@
 </div>
 {/block}
 {block name="footer"}
+<script src="//unpkg.com/swiper/js/swiper.min.js"> </script>
 <script>
     var article_rule = "{:url('/book',array(),'',true)}/{article_id}.html";
     var chapter_rule = "{:url('/chapter',array(),'',true)}/{article_id}/{chapter_id}.html";
 
-    layui.use(['carousel', 'jquery'], function(){
-        var carousel = layui.carousel,
-        $ = layui.jquery;
-
-        $(function () {
-            carousel.render({
-                elem: '#swiper'
-                ,width: '100%' //设置容器宽度
-                ,height: "10rem"
-                ,arrow: 'none' //不显示箭头
-                ,anim: 'fade' //切换动画方式
-            });
-        });
-    });
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay: true,
+    })
 </script>
 {/block}

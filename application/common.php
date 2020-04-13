@@ -886,6 +886,10 @@ function t_date($time = '') {
  */
 function down_image($url = '') {
 
+    if(strpos($url,"http") !== false){
+        return $url;
+    }
+
     $domain = str_replace(array('https://','http://'),'',Request::domain());
     $domain_arr = explode('.',$domain);
 
